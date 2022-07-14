@@ -2,26 +2,36 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/organisms/NavBar/NavBar';
+import {
+  Router,
+  Route,
+  Switch
+} from "react-router-dom";
+import CalculatorPage from './components/pages/CalculatorPage/CalculatorPage';
+import HomePage from './components/pages/HomePage/HomePage';
+import LearnMorePage from './components/pages/LearnMorePage/LearnMorePage';
+import ForgivenessPage from './components/pages/ForgivenessPage/ForgivenessPage';
+import { createBrowserHistory, History } from "history";
 
-function App() {
+const defaultHistory= createBrowserHistory();
+
+type AppProps = {
+  history?: History;
+}
+
+function App({history = defaultHistory}: AppProps) {
   return (
-    <div className="App">
-      <NavBar></NavBar>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router history = {history}>
+      <div className="App">
+        <NavBar></NavBar>
+        <Switch>
+          <Route path="/calculator"> <CalculatorPage/> </Route>
+          <Route path="/home" component={HomePage}/>
+          <Route path="/learn" component={LearnMorePage}/>
+          <Route path="/forgiveness" component={ForgivenessPage}/>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
