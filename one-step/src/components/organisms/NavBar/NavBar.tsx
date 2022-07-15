@@ -31,6 +31,7 @@ const NavBar: FC = () => {
     <NavBarContainer>
       <TitleContainer>
         <StyledTitle>One Step</StyledTitle>
+        <hr/>
       </TitleContainer>
       <ButtonContainer>
         <NavBarButton title="Home" to={PATHS.HOME}></NavBarButton>
