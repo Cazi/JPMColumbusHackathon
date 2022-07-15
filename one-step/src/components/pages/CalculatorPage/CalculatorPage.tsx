@@ -41,7 +41,7 @@ const CalculatorInput = styled.input`
 const PadDiv = styled.div`
   display: flex;
   padding-top: 35px;
-  padding-left: 260px;
+  justify-content: center;
 `;
 
 const CalculatorButton = styled.button`
