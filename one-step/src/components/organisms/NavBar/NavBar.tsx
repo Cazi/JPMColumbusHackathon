@@ -1,46 +1,45 @@
 import { FC } from "react";
-import styled  from "styled-components";
+import styled from "styled-components";
+import { PATHS } from "../../../constants";
 import NavBarButton from "../../atoms/NavBarButton";
 
 const NavBarContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; 
-    height: 100px;
-    width: 100vw; 
-    background-color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100vw;
+  background-color: gray;
 `;
 
 const StyledTitle = styled.h1`
-    color: black;
+  color: black;
 `;
 
 const ButtonContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    height: 40px;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  width: 100%;
 `;
-
 
 const TitleContainer = styled.div`
-    height: 60px;
-    width: 100%;
+  width: 100%;
+  text-align: center;
 `;
 const NavBar: FC = () => {
-    return (
+  return (
     <NavBarContainer>
-        <TitleContainer>
-            <StyledTitle>One Step</StyledTitle>
-        </TitleContainer>
-        <ButtonContainer>
-         <NavBarButton buttonName="Home"></NavBarButton>
-         <NavBarButton buttonName="Discharge"></NavBarButton>
-         <NavBarButton buttonName="Calculator"></NavBarButton>
-         <NavBarButton buttonName="Forgiveness"></NavBarButton>
-         <NavBarButton buttonName="Learn More"></NavBarButton>
-        </ButtonContainer>
-    </NavBarContainer>)
-}
+      <TitleContainer>
+        <StyledTitle>One Step</StyledTitle>
+      </TitleContainer>
+      <ButtonContainer>
+        <NavBarButton title="Home" to={PATHS.HOME}></NavBarButton>
+        <NavBarButton title="Calculator" to={PATHS.CALCULATOR}></NavBarButton>
+        <NavBarButton title="Forgiveness" to={PATHS.FORGIVENESS}></NavBarButton>
+        <NavBarButton title="Learn More" to={PATHS.LEARN_MORE}></NavBarButton>
+      </ButtonContainer>
+    </NavBarContainer>
+  );
+};
 
 export default NavBar;

@@ -1,6 +1,6 @@
 import { FC } from "react";
-import styled  from "styled-components";
-import { Link, useHistory } from "react-router-dom";
+import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 //Styled Div Definition
 const NavBarButtonContainer = styled.div`
@@ -10,15 +10,18 @@ color: white;
 margin: 10px;
 `;
 interface NavBarButtonProps {
-    buttonName: string
+  title: string;
+  to: string;
 }
 
-const NavBarButton: FC<NavBarButtonProps> = ({...props}) => {
-    const history = useHistory();
-    return (
-        <NavBarButtonContainer>
-            <button onClick={() => {console.log("Try push"); history.push({pathname: "/calculator"})}}>{props.buttonName}</button>
-        </NavBarButtonContainer>);
-}
+const NavBarButton: FC<NavBarButtonProps> = ({ title, to, ...props }) => {
+  const navigate = useNavigate();
+
+  return (
+    <NavBarButtonContainer>
+      <button onClick={() => navigate(to)}>{title}</button>
+    </NavBarButtonContainer>
+  );
+};
 
 export default NavBarButton;

@@ -1,11 +1,11 @@
 import { FC } from "react";
-import styled  from "styled-components";
+import styled from "styled-components";
 const LearnMorePageContainer = styled.div`
-height: 100vh;
-background-color: yellow;
-`
+  height: 100vh;
+  background-color: yellow;
+`;
 const LearnMorePage: FC = () => {
-    return (<LearnMorePageContainer></LearnMorePageContainer>)
-}
+  return <LearnMorePageContainer>Learn More Page</LearnMorePageContainer>;
+};
 
 export default LearnMorePage;
