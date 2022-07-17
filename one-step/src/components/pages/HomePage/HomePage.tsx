@@ -143,7 +143,7 @@ const HomePage: FC
               <div>
                 {/* found and a potential answer but don't know how to intepret it 
                 https://stackoverflow.com/questions/42657792/typescript-react-redux-property-xxx-does-not-exist-on-type-intrinsicattrib */}
-                {/* <Articles loading={loading} articles={articles} /> */}
+                {/* <Articles loading ={loading} articles={articles} /> */}
               </div >
             </NewsBlurbs>
           </NewsContainer>
