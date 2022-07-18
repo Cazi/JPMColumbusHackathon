@@ -82,6 +82,24 @@ const NewsBlurbs = styled.div`
   flex-direction: column;
 `;
 
+
+const Container = styled.div`
+width: 100%;
+background: red;
+grid-template-columns: 100px 100px;
+flex-direction: column;
+`;
+
+const Texts = styled.p`
+display: block; 
+white-space: nowrap;
+`;
+
+const Image = styled.div`
+
+`;
+
+
 const HomePage: FC = () => {
     const [loading, setLoading] = useState(false);
     const [articles, setArticles] = useState([]);
@@ -112,7 +130,7 @@ const HomePage: FC = () => {
           </TitleContainer>
           <NewsContainer>
             {/* for loop for it automatically push 10 news from NYT here */}
-            <NewsBlurbs>
+            {/* <NewsBlurbs>
               <a href='https://www.jpmorganchase.com/'> <h3>News Title</h3></a>
               <h4>Author: Thomas Edison</h4>
               <div>
@@ -128,28 +146,38 @@ const HomePage: FC = () => {
                 <p>I am is Awesome</p>
               </div>
               <hr />
-            </NewsBlurbs>
+            </NewsBlurbs> */}
 
             <NewsBlurbs>
-              <div>
+              {/* <div> */}
                 {/* found and a potential answer but don't know how to intepret it 
                 https://stackoverflow.com/questions/42657792/typescript-react-redux-property-xxx-does-not-exist-on-type-intrinsicattrib */}
                 {/* using functional programming*/}
                 {articles.map((article)=> {return   <Articles article={article} />})}
-              </div >
+              {/* </div > */}
             </NewsBlurbs>
           </NewsContainer>
         </ColumnsContainer>
+       
         {/* Right Column  */}
         <ColumnsContainer>
-          <TitleContainer>
+        <Container>
+
+        <Image >
+            <img src="https://cdn.britannica.com/68/136168-050-BA0F65B3/Jamie-Foxx-2009.jpg" width={150}/>
+          <Texts>
+          A very long text about 300 words By Shivani Gonzalez. One show, on Freeform, begins its fifth season while the other, on FX, wraps up its first.Between network, cable and streaming, the modern television landscape is a vast one. Here are some of the shows, specials and movies coming to TV this week, July 18-24. Details and times are subject to change.
+        </Texts>
+        </Image>
+    </Container>
+          {/* <TitleContainer>
             <StyledSubTitle>
               Random Facts
             </StyledSubTitle>
           </TitleContainer>
           <div>
             <p>Some text..</p>
-          </div>
+          </div> */}
         </ColumnsContainer>
       </BodyContainer>
     </HomePageContainer>;

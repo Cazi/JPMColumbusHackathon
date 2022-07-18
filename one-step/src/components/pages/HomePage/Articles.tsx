@@ -6,19 +6,26 @@ import styled from 'styled-components';
 const ArticleContainer = styled.div`
 background-color: blue;
 border: 1px solid white;
-
+flex-direction: row;
 `;
 const Card = styled.div`
+display: inline-block;
+vertical-align: top;
 
+background: #446C74;
+margin: 5px;
 `;
-const CardMedia= styled.img`
+// image ssize
+const CardMedia = styled.img`
 width: 250px
 `;
 
 const CardContent = styled.div`
-
+display: inline-block;
+vertical-align: top;
 `;
-
+// float: left;    
+// margin: 5px 10px 0px 15px;
 const Typography = styled.p`
 
 `;
@@ -26,10 +33,9 @@ const Typography = styled.p`
 interface ArticleProps {
     article: any
 }
-const Article: FC <ArticleProps> = ({ article, ...props }) => {
+const Article: FC<ArticleProps> = ({ article, ...props }) => {
     return (
         <ArticleContainer>
-            {/* {JSON.stringify(article)} */}
             {article && (
                 <Card id={article._id}>
                     <CardMedia
@@ -40,7 +46,7 @@ const Article: FC <ArticleProps> = ({ article, ...props }) => {
                     <CardContent>
                         <Typography color="primary" >
                             <a href={article.web_url} target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
-                                {article.headline.main}</a>
+                                 {article.headline.main}</a>
                         </Typography>
                         <Typography color="textSecondary" >
                             {article.byline.original}
@@ -48,16 +54,16 @@ const Article: FC <ArticleProps> = ({ article, ...props }) => {
                         <Typography  >
                             {article.snippet}
                         </Typography>
+                        <p>
+                            {article.lead_paragraph}
+                        </p>
                     </CardContent>
                 </Card >
             )}
-            
         </ArticleContainer>
     );
 };
-
 Article.propTypes = {
     article: PropTypes.object.isRequired,
 };
-
 export default Article;
