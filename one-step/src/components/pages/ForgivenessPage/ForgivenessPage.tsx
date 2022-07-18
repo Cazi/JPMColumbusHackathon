@@ -1,3 +1,4 @@
+//
 import { FC } from "react";
 import styled from "styled-components";
 const ForgivenessPageContainer = styled.div`
@@ -59,6 +60,11 @@ const ParagraphStyled = styled.p`
   text-align: center;
   margin: 20px;
 `;
+
+const ImageContainer = styled.img`
+background-color:
+`;
+
 const ForgivenessPage: FC = () => {
   return (
     <ForgivenessPageContainer>
@@ -74,7 +80,6 @@ const ForgivenessPage: FC = () => {
       <BodyContainer>
         {/* Veteran Loan Benefits Section */}
         <VeteranSectionContainer>
-          <ParagraphContainer>
             <BlurbImageContainer>
               <img src="https://via.placeholder.com/150" />
             </BlurbImageContainer>
@@ -82,9 +87,8 @@ const ForgivenessPage: FC = () => {
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Nobis architecto eum assumenda, dolores recusandae explicabo fuga accusamus excepturi minima animi, dolor eveniet modi iusto repellat eaque non reiciendis harum iure!
             </ParagraphStyled>
-          </ParagraphContainer>
         </VeteranSectionContainer>
-        <br />
+        <br/>
         {/* Disability Loan Benefits Section */}
         <DisabledSectionContainer>
           <ParagraphContainer>
@@ -101,7 +105,7 @@ const ForgivenessPage: FC = () => {
         <TeacherSectionContainer>
           <ParagraphContainer>
             <BlurbImageContainer>
-              <img src="https://via.placeholder.com/150" />
+              <img src="https://via.placeholder.com/150"/>
             </BlurbImageContainer>
             <ParagraphStyled>
               Lorem ipsum dolor sit amet consectetur.

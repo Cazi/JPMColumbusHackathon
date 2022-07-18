@@ -5,9 +5,12 @@ import CalculatorPage from "./components/pages/CalculatorPage/CalculatorPage";
 import HomePage from "./components/pages/HomePage/HomePage";
 import LearnMorePage from "./components/pages/LearnMorePage/LearnMorePage";
 import ForgivenessPage from "./components/pages/ForgivenessPage/ForgivenessPage";
+import Article  from "./components/pages/HomePage/Articles";
+
 import { PATHS } from "./constants";
 
 function App() {
+  
   return (
     <div className="App">
       <NavBar></NavBar>

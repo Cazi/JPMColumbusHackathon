@@ -1,8 +1,13 @@
-import { FC } from "react";
+import { FC, FormEvent } from "react";
+import ReactDOM from "react-dom";
 import styled from "styled-components";
+
 const CalculatorPageContainer = styled.div`
   height: 100vh;
   background-color: #7E9D9C;  
+`;
+
+const CalculatorForm = styled.form`
 `;
  
 const CalculatorLocation = styled.div`
@@ -60,22 +65,43 @@ const CalculatorButton = styled.button`
   padding-left: 50px;
   padding-right: 50px;
   `;
+
+const sendForm = async (event: FormEvent<HTMLFormElement>) => {
+  event.preventDefault()
+
+  const {loanAmount, loanTerm, interestRate} = event.target as typeof event.target & {
+    loanAmount: {value: number}
+    loanTerm: {value: number}
+    interestRate: {value: number}
+  }
+
+  const J = interestRate.value / 100.0 / 12
+  let N = 12 * loanTerm.value
+  let monthlyPayments = (loanAmount.value * (J / (1 - Math.pow(1 + J, -1 * N)))).toFixed(2)
+
+  let calculate:HTMLHeadingElement = document.getElementById("calculate") as HTMLHeadingElement;
+
+  calculate.innerText = '$' + `${monthlyPayments}` + " in monthly payments";
+}
  
-const CalculatorPage: FC = () => {
+const CalculatorPage: FC = () => { 
   return <CalculatorPageContainer>
     <CalculatorLocation>
       <CalculatorFrame>
-        <b>Loan Amount</b>
-        <CalculatorInput />
-        <PadDiv />
-        <b>Loan Term in Years</b>
-        <CalculatorInput />
-        <PadDiv />
-        <b>Interest Rate Per Year</b>
-        <CalculatorInput />
-        <PadDiv>
-          <CalculatorButton>Calculate</CalculatorButton>
-        </PadDiv>
+        <CalculatorForm onSubmit={sendForm}>
+          <b>Loan Amount</b>
+          <CalculatorInput type="number" id="loanAmount"/>
+          <PadDiv />
+          <b>Loan Term in Years</b>
+          <CalculatorInput type="number" id="loanTerm"/>
+          <PadDiv />
+          <b>Interest Rate Per Year</b>
+          <CalculatorInput type="number" id="interestRate"/>
+          <PadDiv>
+            <CalculatorButton>Calculate</CalculatorButton>
+          </PadDiv>
+          <div id="calculate"></div>
+        </CalculatorForm>
       </CalculatorFrame>
     </CalculatorLocation>
     </CalculatorPageContainer>;
