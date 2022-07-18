@@ -18,16 +18,77 @@ const TitleStyled = styled.p`
 
 `;
 
+const WhoWeAreContainer = styled.p`
+
+`;
+
+const WhatWeDoContainer = styled.p`
+  
+`;
+const LearnMoreContainer = styled.p`
+  
+`;
 
 
 const LearnMorePage: FC = () => {
   return (
     <LearnMorePageContainer>
-      <TitleContainer>
-        <TitleStyled>
-          About Us
+      <TitleStyled>
+        About Us
+      </TitleStyled>
+      <br />
+      <TitleStyled>
+          Who We Are
         </TitleStyled>
-      </TitleContainer>
+      <br/>
+      <WhoWeAreContainer>
+        <ul>
+          <li>List Item</li>
+        </ul>
+        <TitleStyled>
+          What We Do
+        </TitleStyled>
+      </WhoWeAreContainer>
+      <br />
+      <WhatWeDoContainer>
+        <ul>
+          <li>List Item</li>
+        </ul>
+      </WhatWeDoContainer>
+      <br />
+      <TitleStyled>
+        Learn More
+      </TitleStyled>
+      <LearnMoreContainer>
+
+      </LearnMoreContainer>
+
+      {/* 
+        <TitleStyled>
+        Who We Are
+        </TitleStyled>
+        Container
+          <ul>
+            <li>List Item</li>
+          List Item
+          </ul>
+        Container
+        <br/>
+        <TitleStyled>
+          What We Do
+        </TitleStyled>
+        Container
+          <p style="" color="black"> lorem</p>
+        Container
+        <br/>
+        <TitleStyled>
+          Learn More
+        </TitleStyled>
+        Container
+          <p style="" color="black"> lorem</p>
+        Container
+        */}
+
     </LearnMorePageContainer>
   );
 };
