@@ -38,7 +38,7 @@ const ColumnsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: orange;
+  background-color: #f0ebe3;
 `;
 
 // each news blurb contianer

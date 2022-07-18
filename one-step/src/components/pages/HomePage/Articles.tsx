@@ -11,13 +11,13 @@ border-radius: 25px;
 const Card = styled.div`
 display: inline-block;
 vertical-align: top;
-margin: 5px;
+margin: 2.5px;
 `;
 // image ssize
 const CardMedia = styled.img`
 float: left;
 padding: 2.5px 10px 0px 10px;
-max-width:250px;
+max-width:200px;
 max-height:250px;
 width: auto;
 height: auto;
@@ -47,13 +47,16 @@ const Article: FC<ArticleProps> = ({ article, ...props }) => {
                         } alt="news-img" />
                     <CardContent>
                         <Typography color="primary" >
-                            <a href={article.web_url} target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
-                                {article.headline.main}</a>
+                            <a href={article.web_url} target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}> 
+                            <h2>
+                                {article.headline.main}
+                            </h2>
+                            </a>
                         </Typography>
                         <Typography color="textSecondary" >
-                            <p>
+                            <h3>
                                 {article.byline.original}
-                            </p>
+                            </h3>
                         </Typography>
                         <Typography  >
                             <p>

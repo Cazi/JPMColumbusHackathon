@@ -8,12 +8,14 @@ const NavBarContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   width: 100vw;
-  background-color: gray;
+  background-color: #7d9d9c;
 `;
 
-const StyledTitle = styled.h1`
+const StyledTitle = styled.h2`
   color: black;
 `;
+
+
 
 const ButtonContainer = styled.div`
   display: flex;
