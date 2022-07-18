@@ -68,7 +68,9 @@ background-color:
 const ForgivenessPage: FC = () => {
   return (
     <ForgivenessPageContainer>
+
       <TitleContainer>
+
         <StyledTitle>
           Forgiveness
         </StyledTitle>
@@ -80,6 +82,7 @@ const ForgivenessPage: FC = () => {
       <BodyContainer>
         {/* Veteran Loan Benefits Section */}
         <VeteranSectionContainer>
+          <ParagraphContainer>
             <BlurbImageContainer>
               <img src="https://via.placeholder.com/150" />
             </BlurbImageContainer>
@@ -87,9 +90,13 @@ const ForgivenessPage: FC = () => {
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Nobis architecto eum assumenda, dolores recusandae explicabo fuga accusamus excepturi minima animi, dolor eveniet modi iusto repellat eaque non reiciendis harum iure!
             </ParagraphStyled>
-        </VeteranSectionContainer>
+
         <br/>
-        {/* Disability Loan Benefits Section */}
+
+          </ParagraphContainer>
+        </VeteranSectionContainer>
+        <br />
+  {/* Disability Loan Benefits Section */ }
         <DisabledSectionContainer>
           <ParagraphContainer>
             <BlurbImageContainer>
@@ -100,20 +107,20 @@ const ForgivenessPage: FC = () => {
             </ParagraphStyled>
           </ParagraphContainer>
         </DisabledSectionContainer>
-        <br />
-        {/* Teachers Loan Benefits Section */}
-        <TeacherSectionContainer>
-          <ParagraphContainer>
-            <BlurbImageContainer>
-              <img src="https://via.placeholder.com/150"/>
-            </BlurbImageContainer>
-            <ParagraphStyled>
-              Lorem ipsum dolor sit amet consectetur.
-            </ParagraphStyled>
-          </ParagraphContainer>
-        </TeacherSectionContainer>
-      </BodyContainer>
-    </ForgivenessPageContainer>);
+        <br/>
+  {/* Teachers Loan Benefits Section */ }
+  <TeacherSectionContainer>
+    <ParagraphContainer>
+      <BlurbImageContainer>
+        <img src="https://via.placeholder.com/150" />
+      </BlurbImageContainer>
+      <ParagraphStyled>
+        Lorem ipsum dolor sit amet consectetur.
+      </ParagraphStyled>
+    </ParagraphContainer>
+  </TeacherSectionContainer>
+      </BodyContainer >
+    </ForgivenessPageContainer >);
 };
 
 export default ForgivenessPage;
