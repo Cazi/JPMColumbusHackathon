@@ -8,12 +8,14 @@ const NavBarContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   width: 100vw;
-  background-color: gray;
+  background-color: #7d9d9c;
 `;
 
-const StyledTitle = styled.h1`
+const StyledTitle = styled.h2`
   color: black;
 `;
+
+
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -37,7 +39,7 @@ const NavBar: FC = () => {
         <NavBarButton title="Home" to={PATHS.HOME}></NavBarButton>
         <NavBarButton title="Calculator" to={PATHS.CALCULATOR}></NavBarButton>
         <NavBarButton title="Forgiveness" to={PATHS.FORGIVENESS}></NavBarButton>
-        <NavBarButton title="Learn More" to={PATHS.LEARN_MORE}></NavBarButton>
+        <NavBarButton title="About Us" to={PATHS.LEARN_MORE}></NavBarButton>
       </ButtonContainer>
     </NavBarContainer>
   );
