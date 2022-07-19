@@ -113,11 +113,11 @@ const HomePage: FC = () => {
         <ColumnsContainer>
           <TitleContainer>
             <StyledSubTitle>
-              Random Facts
+              Quick Tips
             </StyledSubTitle>
           </TitleContainer>
           <div>
-            <p>Some text..</p>
+            <p>Some text...</p>
           </div>
         </ColumnsContainer>
       </BodyContainer>

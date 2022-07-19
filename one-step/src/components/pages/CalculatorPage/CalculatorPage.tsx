@@ -19,7 +19,8 @@ const CalculatorLocation = styled.div`
 const CalculatorFrame = styled.div`
   background-color: #e4dccf!important;
   border: 1.6px solid #324b4e;
-  border-radius: 10px;
+  border-radius: 15px;
+  font-size: 17px;
   height: 75%;
   width: 45%;
   padding-left: 35px;
@@ -31,7 +32,7 @@ const CalculatorInput = styled.input`
   padding-top: 20px;
   background-color: #f0ebe3;
   border: .0625rem solid #324b4e;
-  border-radius: 4px;
+  border-radius: 14px;
   color: #black;
   display: block;
   font-family: CircularStd-Book,Arial,sans-serif;
@@ -53,8 +54,8 @@ const CalculatorButton = styled.button`
   display: inline-block;
   padding: 0.4em 0.8em;
   background-color: #576f72;
-  border: none;
-  border-radius: 4px;
+  border: #324b4e;
+  border-radius: 10px;
   font-family: 'PT Sans', sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -64,19 +65,23 @@ const CalculatorButton = styled.button`
   padding: .75rem .75rem;
   padding-left: 50px;
   padding-right: 50px;
+  margin-bottom: 10px;
 `;
 
 const CalculatorForm = styled.form`
+ color:  #324b4e;
 `;
 
 const CalculatedDisplay = styled.div`
   background-color: #e4dccf!important;
+  color:  #324b4e;
   border: 1.6px solid #324b4e;
-  border-radius: 10px;
+  border-radius: 15px;
+  font-size: 16px;
   height: 50%;
   width: 45%;
   padding-left: 35px;
-  margin-bottom: 35px;
+  margin-bottom: 90px;
 `;
 
 const CalcSwitch = styled.input`
