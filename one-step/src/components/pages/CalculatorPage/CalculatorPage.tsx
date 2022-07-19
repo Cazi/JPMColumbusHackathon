@@ -1,19 +1,18 @@
 import { FC, FormEvent } from "react";
-import ReactDOM from "react-dom";
 import styled from "styled-components";
 
 const CalculatorPageContainer = styled.div`
-  height: 100vh;
-  background-color: #7E9D9C;  
-`;
-
-const CalculatorForm = styled.form`
+  height: 150%;
+  width: 101.1%;
+  background-color: #7E9D9C;
 `;
  
 const CalculatorLocation = styled.div`
   padding-top: 100px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   height: 100vh;
 `;
  
@@ -21,10 +20,11 @@ const CalculatorFrame = styled.div`
   background-color: #f3f4f8!important;
   border: 1.6px solid black;
   border-radius: 10px;
-  height: 50%;
+  height: 75%;
   width: 45%;
   padding-left: 35px;
   padding-top: 35px;
+  margin-bottom: 35px;
 `;
  
 const CalculatorInput = styled.input`
@@ -64,7 +64,20 @@ const CalculatorButton = styled.button`
   padding: .75rem .75rem;
   padding-left: 50px;
   padding-right: 50px;
-  `;
+`;
+
+const CalculatorForm = styled.form`
+`;
+
+const CalculatedDisplay = styled.div`
+  background-color: #f3f4f8!important;
+  border: 1.6px solid black;
+  border-radius: 10px;
+  height: 50%;
+  width: 45%;
+  padding-left: 35px;
+  margin-bottom: 35px;
+`;
 
 const sendForm = async (event: FormEvent<HTMLFormElement>) => {
   event.preventDefault()
@@ -78,10 +91,18 @@ const sendForm = async (event: FormEvent<HTMLFormElement>) => {
   const J = interestRate.value / 100.0 / 12
   let N = 12 * loanTerm.value
   let monthlyPayments = (loanAmount.value * (J / (1 - Math.pow(1 + J, -1 * N)))).toFixed(2)
+  let interestPaid = (Number(monthlyPayments) * N - loanAmount.value).toFixed(2);
+
+  let Q = N / 2;
+  let high = (loanAmount.value * (J / (1 - Math.pow(1 + J, -1 * Q)))).toFixed(2)
 
   let calculate:HTMLHeadingElement = document.getElementById("calculate") as HTMLHeadingElement;
+  let highEnd:HTMLHeadingElement = document.getElementById("high-end") as HTMLHeadingElement;
+  let totalInterest:HTMLHeadingElement = document.getElementById("total-interest") as HTMLHeadingElement;
 
-  calculate.innerText = '$' + `${monthlyPayments}` + " in monthly payments";
+  calculate.innerText = 'Cost: $' + `${monthlyPayments}` + " in monthly payments";
+  highEnd.innerText = 'High-End Cost: $' + `${high}` + " in monthly payments";
+  totalInterest.innerHTML = 'Total Interest Paid: $' + `${interestPaid}`; 
 }
  
 const CalculatorPage: FC = () => { 
@@ -90,19 +111,24 @@ const CalculatorPage: FC = () => {
       <CalculatorFrame>
         <CalculatorForm onSubmit={sendForm}>
           <b>Loan Amount</b>
-          <CalculatorInput type="number" id="loanAmount"/>
+          <CalculatorInput type="number" id="loanAmount" placeholder="Enter Your Loan Amount"/>
           <PadDiv />
           <b>Loan Term in Years</b>
-          <CalculatorInput type="number" id="loanTerm"/>
+          <CalculatorInput type="number" id="loanTerm" placeholder="Enter Your Loan Term"/>
           <PadDiv />
           <b>Interest Rate Per Year</b>
-          <CalculatorInput type="number" id="interestRate"/>
+          <CalculatorInput type="number" id="interestRate" placeholder="Enter Your Interest Rate"/>
           <PadDiv>
             <CalculatorButton>Calculate</CalculatorButton>
           </PadDiv>
-          <div id="calculate"></div>
+          
         </CalculatorForm>
       </CalculatorFrame>
+      <CalculatedDisplay>
+        <h2><div id="calculate">Cost: </div></h2>
+        <h2><div id="high-end">High-End Cost: </div></h2>
+        <h2><div id="total-interest">Total Interest Paid: </div> </h2>
+      </CalculatedDisplay>
     </CalculatorLocation>
     </CalculatorPageContainer>;
 };
