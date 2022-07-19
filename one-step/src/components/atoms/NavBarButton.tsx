@@ -8,7 +8,7 @@ height: 50px
 color: white;
 margin: 10px;
 color: black;
-background-color: #7d9d9c;
+background-color: #324B4E;
 
 `;
 

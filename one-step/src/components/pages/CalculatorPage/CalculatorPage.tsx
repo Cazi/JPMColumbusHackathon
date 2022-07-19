@@ -4,7 +4,7 @@ import styled from "styled-components";
 const CalculatorPageContainer = styled.div`
   height: 150%;
   width: 101.1%;
-  background-color: #7E9D9C;
+  background-color: #F0EBE3;
 `;
  
 const CalculatorLocation = styled.div`
@@ -17,8 +17,8 @@ const CalculatorLocation = styled.div`
 `;
  
 const CalculatorFrame = styled.div`
-  background-color: #f3f4f8!important;
-  border: 1.6px solid black;
+  background-color: #e4dccf!important;
+  border: 1.6px solid #324b4e;
   border-radius: 10px;
   height: 75%;
   width: 45%;
@@ -29,10 +29,10 @@ const CalculatorFrame = styled.div`
  
 const CalculatorInput = styled.input`
   padding-top: 20px;
-  background-color: #fff;
+  background-color: #f0ebe3;
   border: .0625rem solid #515260;
   border-radius: 4px;
-  color: #151515;
+  color: #E4DCCF;
   display: block;
   font-family: CircularStd-Book,Arial,sans-serif;
   font-size: 1rem;
@@ -52,13 +52,13 @@ const PadDiv = styled.div`
 const CalculatorButton = styled.button`
   display: inline-block;
   padding: 0.4em 0.8em;
-  background-color: blue;
+  background-color: #576f72;
   border: none;
   border-radius: 4px;
   font-family: 'PT Sans', sans-serif;
   font-size: 16px;
   line-height: 24px;
-  color: #fff;
+  color: #FFF;
   cursor: pointer;
   line-height: normal;
   padding: .75rem .75rem;
