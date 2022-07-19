@@ -2,13 +2,13 @@ import { FC } from "react";
 import styled from "styled-components";
 const LearnMorePageContainer = styled.div`
   height: 100vh;
-  background-color: white;
+  background-color: #F0EBE3;
 `;
 
 const TitleContainer = styled.div`
   width: 100%;
   height: 150px;
-  background-color: white;
+  background-color: #F0EBE3;
   margin-top: 0px;
 
 `;
