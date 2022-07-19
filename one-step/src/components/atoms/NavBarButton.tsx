@@ -8,7 +8,6 @@ height: 50px
 color: white;
 margin: 10px;
 background-color: #324B4E;
-
 `;
 
 const NavBarButtonText = styled.div`

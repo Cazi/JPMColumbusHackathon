@@ -30,7 +30,7 @@ const CalculatorFrame = styled.div`
 const CalculatorInput = styled.input`
   padding-top: 20px;
   background-color: #f0ebe3;
-  border: .0625rem solid #515260;
+  border: .0625rem solid #324b4e;
   border-radius: 4px;
   color: #black;
   display: block;
@@ -71,7 +71,7 @@ const CalculatorForm = styled.form`
 
 const CalculatedDisplay = styled.div`
   background-color: #e4dccf!important;
-  border: 1.6px solid #576F72;
+  border: 1.6px solid #324b4e;
   border-radius: 10px;
   height: 50%;
   width: 45%;
