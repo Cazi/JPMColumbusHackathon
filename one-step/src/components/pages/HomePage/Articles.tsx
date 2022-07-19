@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 // background-color: yellow;
 const ArticleContainer = styled.div`
-border: 1px solid white;
+border: 1px solid #e4dccf;
 flex-direction: row;
 border-radius: 25px;
 `;

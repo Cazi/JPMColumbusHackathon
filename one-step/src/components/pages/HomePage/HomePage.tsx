@@ -28,7 +28,7 @@ const TitleContainer = styled.div`
 
 // sub collumn headers
 const StyledSubTitle = styled.h1`
-  color: black;
+  color: #324b4e;
 `;
 
 // News Column blurb container
