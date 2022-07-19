@@ -1,4 +1,4 @@
-import { FC, FormEvent } from "react";
+import { FC, FormEvent, MouseEvent } from "react";
 import styled from "styled-components";
 
 const CalculatorPageContainer = styled.div`
@@ -79,6 +79,15 @@ const CalculatedDisplay = styled.div`
   margin-bottom: 35px;
 `;
 
+const CalcSwitch = styled.input`
+
+`
+
+const SwitchDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
 const sendForm = async (event: FormEvent<HTMLFormElement>) => {
   event.preventDefault()
 
@@ -89,7 +98,15 @@ const sendForm = async (event: FormEvent<HTMLFormElement>) => {
   }
 
   const J = interestRate.value / 100.0 / 12
-  let N = 12 * loanTerm.value
+
+  let lty:HTMLDivElement = document.getElementById("lty") as HTMLDivElement;
+  let N = 0;
+  if (lty.innerHTML === 'Loan Term in Months') {
+    N = loanTerm.value
+  } else {
+    N = 12 * loanTerm.value
+  }
+   
   let monthlyPayments = (loanAmount.value * (J / (1 - Math.pow(1 + J, -1 * N)))).toFixed(2)
   let interestPaid = (Number(monthlyPayments) * N - loanAmount.value).toFixed(2);
 
@@ -104,6 +121,21 @@ const sendForm = async (event: FormEvent<HTMLFormElement>) => {
   highEnd.innerText = 'High-End Cost: $' + `${high}` + " in monthly payments";
   totalInterest.innerHTML = 'Total Interest Paid: $' + `${interestPaid}`; 
 }
+
+const buttonHandler = async (event: MouseEvent<HTMLInputElement>) => {
+  
+  let c2m:HTMLDivElement = document.getElementById("c2m") as HTMLDivElement;
+  let lty:HTMLDivElement = document.getElementById("lty") as HTMLDivElement;
+
+  if (c2m.innerHTML === "Change to months: ") {
+    c2m.innerHTML = 'Change to years: ';
+    lty.innerHTML = 'Loan Term in Months';
+  } else {
+    c2m.innerHTML = 'Change to months: ';
+    lty.innerHTML = 'Loan Term in Years';
+  }
+};
+
  
 const CalculatorPage: FC = () => { 
   return <CalculatorPageContainer>
@@ -113,7 +145,11 @@ const CalculatorPage: FC = () => {
           <b>Loan Amount</b>
           <CalculatorInput type="number" id="loanAmount" placeholder="Enter Your Loan Amount"/>
           <PadDiv />
-          <b>Loan Term in Years</b>
+          <b><div id="lty">Loan Term in Years</div></b>
+          <SwitchDiv>
+            <div id="c2m">Change to months: </div>
+            <div><CalcSwitch type="checkbox" onClick={buttonHandler} name="button1"></CalcSwitch></div>
+          </SwitchDiv>
           <CalculatorInput type="number" id="loanTerm" placeholder="Enter Your Loan Term"/>
           <PadDiv />
           <b>Interest Rate Per Year</b>
