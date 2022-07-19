@@ -7,7 +7,6 @@ const NavBarButtonContainer = styled.div`
 height: 50px
 color: white;
 margin: 10px;
-color: black;
 background-color: #324B4E;
 
 `;

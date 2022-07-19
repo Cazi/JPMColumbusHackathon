@@ -32,7 +32,7 @@ const CalculatorInput = styled.input`
   background-color: #f0ebe3;
   border: .0625rem solid #515260;
   border-radius: 4px;
-  color: #E4DCCF;
+  color: #black;
   display: block;
   font-family: CircularStd-Book,Arial,sans-serif;
   font-size: 1rem;
@@ -70,8 +70,8 @@ const CalculatorForm = styled.form`
 `;
 
 const CalculatedDisplay = styled.div`
-  background-color: #f3f4f8!important;
-  border: 1.6px solid black;
+  background-color: #e4dccf!important;
+  border: 1.6px solid #576F72;
   border-radius: 10px;
   height: 50%;
   width: 45%;
