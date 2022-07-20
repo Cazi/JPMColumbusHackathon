@@ -4,14 +4,15 @@ import styled from 'styled-components';
 
 // background-color: yellow;
 const ArticleContainer = styled.div`
-border: 1px solid white;
+border: 1.75px solid #e4dccf;
 flex-direction: row;
-border-radius: 25px;
+border-radius: 24px;
 `;
 const Card = styled.div`
 display: inline-block;
 vertical-align: top;
 margin: 2.5px;
+color: #324b4e;
 `;
 // image ssize
 const CardMedia = styled.img`

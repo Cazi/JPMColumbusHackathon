@@ -28,7 +28,7 @@ const TitleContainer = styled.div`
 
 // sub collumn headers
 const StyledSubTitle = styled.h1`
-  color: black;
+  color: #324b4e;
 `;
 
 // News Column blurb container
@@ -113,11 +113,11 @@ const HomePage: FC = () => {
         <ColumnsContainer>
           <TitleContainer>
             <StyledSubTitle>
-              Random Facts
+              Quick Tips
             </StyledSubTitle>
           </TitleContainer>
           <div>
-            <p>Some text..</p>
+            <p>Some text...</p>
           </div>
         </ColumnsContainer>
       </BodyContainer>
