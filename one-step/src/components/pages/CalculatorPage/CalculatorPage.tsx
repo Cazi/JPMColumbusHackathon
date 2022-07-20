@@ -30,7 +30,7 @@ const CalculatorFrame = styled.div`
  
 const CalculatorInput = styled.input`
   padding-top: 20px;
-  background-color: #f0ebe3;
+  background-color: white;
   border: .0625rem solid #324b4e;
   border-radius: 14px;
   color: #black;

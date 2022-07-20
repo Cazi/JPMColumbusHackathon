@@ -39,6 +39,7 @@ const ColumnsContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   background-color: #f0ebe3;
+  padding: 2.5px 2.5px 2.5px 2.5px;
 `;
 
 // each news blurb contianer
@@ -61,6 +62,7 @@ width: 100%;
 background: red;
 grid-template-columns: 100px 100px;
 flex-direction: column;
+
 `;
 
 const Texts = styled.div`
@@ -71,6 +73,15 @@ const Image = styled.div`
 float: left;
 `;
 
+const ImageFacts = styled.img`
+float: right;
+padding: 2.5px 10px 0px 10px;
+max-width: 100px;
+max-height: 100px;
+width: auto;
+height: auto;
+`;
+
 const HomePage: FC = () => {
     const [loading, setLoading] = useState(false);
     const [articles, setArticles] = useState([]);
@@ -79,7 +90,7 @@ const HomePage: FC = () => {
       const getArticles = async () => {
         setLoading(true);
         const res = await axios.get
-        (`https://api.nytimes.com/svc/search/v2/articlesearch.json?fq=section_name:("your money")&sort=newest&api-key=${process.env.REACT_APP_NYTIMES_API_KEY}`);
+        (`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=studentloan&sort=newest&api-key=${process.env.REACT_APP_NYTIMES_API_KEY}`);
         
         // not letting fetching news about loans.
         //  (`https://api.nytimes.com/svc/topstories/v2/Business.json?api-key=${process.env.REACT_APP_NYTIMES_API_KEY}`);
@@ -99,12 +110,8 @@ const HomePage: FC = () => {
           </TitleContainer>
           <NewsContainer>
             <NewsBlurbs>
-              {/* <div> */}
-                {/* found and a potential answer but don't know how to intepret it 
-                https://stackoverflow.com/questions/42657792/typescript-react-redux-property-xxx-does-not-exist-on-type-intrinsicattrib */}
                 {/* using functional programming*/}
                 {articles.map((article)=> {return   <Articles article={article} />})}
-              {/* </div > */}
             </NewsBlurbs>
           </NewsContainer>
         </ColumnsContainer>
@@ -113,12 +120,56 @@ const HomePage: FC = () => {
         <ColumnsContainer>
           <TitleContainer>
             <StyledSubTitle>
-              Quick Tips
+              Did you know
             </StyledSubTitle>
+             {/* <img src= "https://www.pngfind.com/pngs/m/12-121032_do-you-know-did-you-know-sign-hd.png" /> */}
           </TitleContainer>
           <div>
-            <p>Some text...</p>
+          <strong>You're not alone!</strong>
+          {/* <ImageFacts src= "thenounproject.com/search/icons/?iconspage=1&q=community"> </ImageFacts> */}
+          <ImageFacts src= "https://static.thenounproject.com/png/4398555-200.png"></ImageFacts>
+            <p>43.4 Million borrowers have federal student loan debt, where the federal loan balance is 1.6 Trillion dollars. There is no end in sight when seeing what 2022 has in store as the nation's student loan debt increases by 1.95%. </p>
           </div>
+<br/>
+          <div>
+          <strong> Mountain to Pebbles </strong>
+          {/* <ImageFacts src= "thenounproject.com/browse/icons/term/mountain-mining/?iconspage=1"> </ImageFacts> */}
+          <ImageFacts src= "https://static.thenounproject.com/png/148945-200.png"></ImageFacts>
+            <p>The average federal student loan debt is 36,510 dollars, and the average debt after a bachelor's degree is over 30,000 dollars. </p>
+          </div>
+<br/>
+          <div>
+          <strong> When to Pay </strong>
+          {/* <ImageFacts src= "thenounproject.com/search/icons/?iconspage=1&q=payment"> </ImageFacts> */}
+          <ImageFacts src= "https://static.thenounproject.com/png/105293-200.png"></ImageFacts>         
+            <p> Most federal loans such as Subsidized and Unsubsidized loans distributed by the federal government provide a six-month grace period before having to make the first payment</p>
+          </div>
+<br/>
+          <div>
+          <strong>Loan Options </strong>
+          {/* <ImageFacts src= "thenounproject.com/search/icons/?iconspage=1&q=options"> </ImageFacts> */}
+          <ImageFacts src= "https://static.thenounproject.com/png/1942385-200.png"></ImageFacts>
+            <p> Consider looking at all of your federal loan options before choosing a private lending service since federal interest rates a typically much lower</p>
+          </div>
+<br/>
+          <div>
+          <strong> Loan Consolidation</strong>
+          {/* <ImageFacts src= "https://thenounproject.com/search/icons/?iconspage=1&q=consolidation"> </ImageFacts> */}
+          <ImageFacts src= "https://static.thenounproject.com/png/4488742-200.png"></ImageFacts>
+            <p> Try combing your loans into one monthly payment if you have multiple federal loans; although, make sure it is the right plan for you</p>
+          </div>
+<br/>
+          <div>
+          <strong>Discharges </strong>
+          {/* <ImageFacts src= "https://thenounproject.com/search/icons/?iconspage=1&q=free"> </ImageFacts> */}
+          <ImageFacts src= "https://static.thenounproject.com/png/1902720-200.png"></ImageFacts>
+            <p>  If external circumstances occur, such as disability or possible degree fraud, one can be exempt from paying back their student loans </p>
+          </div>
+
+          {/* <div>
+          <strong> </strong>
+            <p> </p>
+          </div> */}
         </ColumnsContainer>
       </BodyContainer>
     </HomePageContainer>;

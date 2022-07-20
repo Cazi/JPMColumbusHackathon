@@ -3,15 +3,18 @@ import { FC } from "react";
 import styled from "styled-components";
 const ForgivenessPageContainer = styled.div`
   height: 100vh;
-  background-color: #E4DCCF;
+  background-color: #F0EBE3;
+  border: 1px solid #e4dccf;
 `;
 
 const BodyContainer = styled.div`
-  background-color: #E4DCCF;
+  background-color: #F0EBE3;
+  border: 2px solid #e4dccf;
   width: 100%;
 `;
 const VeteranSectionContainer = styled.div`
-  background-color: #E4DCCF;  
+  background-color: #F0EBE3;
+  border: 1.75px solid #e4dccf;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -26,11 +29,13 @@ const DisabledSectionContainer = styled.div`
   justify-content: flex-start;
   border-style: solid;
   border-radius: 50px;
+  border: 1.75px solid #e4dccf;
   padding: 20px;
   margin: 10px;
 `;
 const TeacherSectionContainer = styled.div`
   display: flex;
+  border: 1.75px solid #e4dccf;
   flex-direction: column;
   justify-content: flex-start;
   border-style: solid;
@@ -56,8 +61,14 @@ const TitleContainer = styled.div`
 `;
 
 //Images
-const BlurbImageContainer = styled.div`
-  float: left;
+const BlurbImageContainer = styled.img`
+float: left;
+padding: 2.5px 10px 0px 10px;
+max-width:250px;
+max-height:250px;
+width: auto;
+height: auto;
+
 `;
 //Text
 const ParagraphStyled = styled.p`
@@ -71,21 +82,21 @@ const UnorderedListStyled = styled.ul`
   //padding-left: 20px;
   margin: 0;
   vertical-align: left;
-  background-color: #E4DCCF;
+  background-color: #F0EBE3;
 `;
 
 const ForgivenessPage: FC = () => {
   return (
     <ForgivenessPageContainer>
       <TitleContainer>
-        <StyledTitle>
+        {/* <StyledTitle>
           Forgiveness
-        </StyledTitle>
+        </StyledTitle> */}
         <StyledSubtitle>
           Opportunities for Loan Forgiveness for Specified Groups
         </StyledSubtitle>
       </TitleContainer>
-      <hr />
+      {/* <hr /> */}
       <BodyContainer>
         {/* Veteran Loan Benefits Section */}
         <TitleContainer>
@@ -95,8 +106,7 @@ const ForgivenessPage: FC = () => {
         </TitleContainer>
         <VeteranSectionContainer>
           <div>
-            <BlurbImageContainer>
-              <img src="https://via.placeholder.com/150" />
+            <BlurbImageContainer src="https://via.placeholder.com/150">
             </BlurbImageContainer>
             <ParagraphStyled>
               The Public Service Loan Forgiveness Program, or PSLF, is a federal student loan program that forgives your
@@ -131,8 +141,7 @@ const ForgivenessPage: FC = () => {
         </StyledSubtitle>
         <DisabledSectionContainer>
           <div>
-            <BlurbImageContainer>
-              <img src="https://via.placeholder.com/150" />
+            <BlurbImageContainer src="https://via.placeholder.com/150" >
             </BlurbImageContainer>
             <ParagraphStyled>
               A <strong>total and permanent disability (TPD) discharge </strong>relieves you from having to repay a William D.
@@ -170,8 +179,7 @@ const ForgivenessPage: FC = () => {
         </StyledSubtitle>
         <TeacherSectionContainer>
           <div>
-            <BlurbImageContainer>
-              <img src="https://via.placeholder.com/150" />
+            <BlurbImageContainer src="https://via.placeholder.com/150" >
             </BlurbImageContainer>
             <ParagraphStyled>
               The federal government considers a teacher to be "a person who provides direct classroom teaching, or classroom-type teaching in a nonclassroom setting. Special education teachers are considered teachers."
