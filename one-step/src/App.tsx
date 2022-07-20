@@ -5,6 +5,7 @@ import CalculatorPage from "./components/pages/CalculatorPage/CalculatorPage";
 import HomePage from "./components/pages/HomePage/HomePage";
 import LearnMorePage from "./components/pages/LearnMorePage/LearnMorePage";
 import ForgivenessPage from "./components/pages/ForgivenessPage/ForgivenessPage";
+import MyStepsPage from "./components/pages/MyStepsPage/MyStepsPage";
 import Article  from "./components/pages/HomePage/Articles";
 
 import { PATHS } from "./constants";
@@ -15,9 +16,10 @@ function App() {
     <div className="App">
       <NavBar></NavBar>
       <Routes>
-        <Route path={PATHS.BASE} element={<HomePage/>} />
+        <Route path={PATHS.BASE} element={<MyStepsPage/>} />
+        <Route path={PATHS.STEPS} element={<MyStepsPage/>} />
         <Route path={PATHS.CALCULATOR} element={<CalculatorPage />} />
-        <Route path={PATHS.HOME} element={<HomePage />} />
+        <Route path={PATHS.NEWS} element={<HomePage />} />
         <Route path={PATHS.LEARN_MORE} element={<LearnMorePage />} />
         <Route path={PATHS.FORGIVENESS} element={<ForgivenessPage />} />
       </Routes>

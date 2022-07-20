@@ -1,6 +1,7 @@
 export const PATHS = {
   BASE: "/",
-  HOME: "/home",
+  STEPS: "/my-steps",
+  NEWS: "/news",
   CALCULATOR: "/calculator",
   FORGIVENESS: "/forgive",
   LEARN_MORE: "/learn",
