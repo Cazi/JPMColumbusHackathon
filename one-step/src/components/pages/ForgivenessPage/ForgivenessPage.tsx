@@ -3,12 +3,15 @@ import { FC } from "react";
 import styled from "styled-components";
 const ForgivenessPageContainer = styled.div`
   height: 100vh;
-  background-color: white;
+  background-color: #E4DCCF;
 `;
 
 const BodyContainer = styled.div`
+  background-color: #E4DCCF;
+  width: 100%;
 `;
 const VeteranSectionContainer = styled.div`
+  background-color: #E4DCCF;  
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -37,6 +40,8 @@ const TeacherSectionContainer = styled.div`
 `;
 //Title
 const StyledTitle = styled.h1`
+  margin-block-start: none;
+  margin-top: none;
   color: black;
   text-align: center;
 `;
@@ -45,7 +50,7 @@ const StyledSubtitle = styled.h3`
   text-align: center;
 `;
 
-const TitleContainer = styled.div`
+const TitleContainer = styled.div`  
   width: 100%;
   text-align: center;
 `;
@@ -66,6 +71,7 @@ const UnorderedListStyled = styled.ul`
   //padding-left: 20px;
   margin: 0;
   vertical-align: left;
+  background-color: #E4DCCF;
 `;
 
 const ForgivenessPage: FC = () => {
@@ -82,9 +88,11 @@ const ForgivenessPage: FC = () => {
       <hr />
       <BodyContainer>
         {/* Veteran Loan Benefits Section */}
-        <StyledSubtitle>
-          Veterans
-        </StyledSubtitle>
+        <TitleContainer>
+          <StyledSubtitle>
+            Veterans
+          </StyledSubtitle>
+        </TitleContainer>
         <VeteranSectionContainer>
           <div>
             <BlurbImageContainer>
