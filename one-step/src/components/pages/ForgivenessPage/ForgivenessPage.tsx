@@ -1,6 +1,11 @@
 //
 import { FC } from "react";
 import styled from "styled-components";
+import teacher from './Teacher.png';
+import veteran from './Veteran.png'
+import DisabledPersons from './DisabledPersons.png'
+//import disabilityIcon;
+//import veteran
 const ForgivenessPageContainer = styled.div`
   height: 100vh;
   background-color: #F0EBE3;
@@ -66,9 +71,8 @@ float: left;
 padding: 2.5px 10px 0px 10px;
 max-width:250px;
 max-height:250px;
-width: auto;
-height: auto;
-
+width: 200px;
+height: 200px;
 `;
 //Text
 const ParagraphStyled = styled.p`
@@ -106,7 +110,7 @@ const ForgivenessPage: FC = () => {
         </TitleContainer>
         <VeteranSectionContainer>
           <div>
-            <BlurbImageContainer src="https://via.placeholder.com/150">
+            <BlurbImageContainer src={veteran}>
             </BlurbImageContainer>
             <ParagraphStyled>
               The Public Service Loan Forgiveness Program, or PSLF, is a federal student loan program that forgives your
@@ -141,7 +145,7 @@ const ForgivenessPage: FC = () => {
         </StyledSubtitle>
         <DisabledSectionContainer>
           <div>
-            <BlurbImageContainer src="https://via.placeholder.com/150" >
+            <BlurbImageContainer src={DisabledPersons}>
             </BlurbImageContainer>
             <ParagraphStyled>
               A <strong>total and permanent disability (TPD) discharge </strong>relieves you from having to repay a William D.
@@ -152,7 +156,6 @@ const ForgivenessPage: FC = () => {
               To qualify for a TPD discharge, you must complete and submit a <strong> TPD discharge application</strong>,  along with documentation
               showing that you meet our requirements for being considered <em>totally and</em> <em>permanently disabled</em>, to Nelnet, the servicer
               that assists ED with the TPD discharge process.
-              <br />
               <br />
               You can show that you qualify for a TPD discharge by providing documentation from one of three sources:
               <ul>
@@ -179,19 +182,20 @@ const ForgivenessPage: FC = () => {
         </StyledSubtitle>
         <TeacherSectionContainer>
           <div>
-            <BlurbImageContainer src="https://via.placeholder.com/150" >
+            <BlurbImageContainer src={teacher}>
             </BlurbImageContainer>
             <ParagraphStyled>
               The federal government considers a teacher to be "a person who provides direct classroom teaching, or classroom-type teaching in a nonclassroom setting. Special education teachers are considered teachers."
               <br />
               <br />
-              Under the Teacher Loan Forgiveness Program,
+              Under the <strong>Teacher Loan Forgiveness Program</strong>,
               if you teach full time for five complete and consecutive academic years in a low-income school
-              or educational service agency, and meet other qualifications, you may be eligible for forgiveness of up to $17,500 on your Direct Subsidized and Unsubsidized Loans and your Subsidized and Unsubsidized Federal Stafford Loans.
+              or educational service agency, and meet other qualifications, you may be eligible for forgiveness of up to <strong>$17,500</strong> on your <strong>Direct Subsidized</strong> and <strong>Unsubsidized Loans</strong> and your <strong>Subsidized</strong> and <strong>Unsubsidized Federal Stafford</strong> Loans.
               <br />
               <br />
               If you have a Direct Consolidation Loan or a Federal Consolidation Loan, you may be eligible for forgiveness of the outstanding portion of the consolidation loan that repaid an eligible Direct Subsidized Loan, Direct Unsubsidized
               Loan, Subsidized Federal Stafford Loan, or Unsubsidized Federal Stafford Loan.
+              <br />
               <br />
               These are the requirements to qualify for this program:
               <ul>
