@@ -16,6 +16,7 @@ const TitleStyled = styled.p`
   color: #324b4e;
   padding: 26px;
   font-size: 24px;
+  font-weight: bold;
 
 `;
 
@@ -27,7 +28,7 @@ const WhatWeDoContainer = styled.p`
  color: #324b4e;
 `;
 const LearnMoreContainer = styled.p`
- color: #324b4e; 
+ color: #324b4e;
 `;
 
 
