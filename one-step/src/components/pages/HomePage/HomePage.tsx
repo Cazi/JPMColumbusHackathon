@@ -90,7 +90,7 @@ const HomePage: FC = () => {
       const getArticles = async () => {
         setLoading(true);
         const res = await axios.get
-        (`https://api.nytimes.com/svc/search/v2/articlesearch.json?fq=section_name:("your money")&sort=newest&api-key=${process.env.REACT_APP_NYTIMES_API_KEY}`);
+        (`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=studentloan&sort=newest&api-key=${process.env.REACT_APP_NYTIMES_API_KEY}`);
         
         // not letting fetching news about loans.
         //  (`https://api.nytimes.com/svc/topstories/v2/Business.json?api-key=${process.env.REACT_APP_NYTIMES_API_KEY}`);
@@ -110,12 +110,8 @@ const HomePage: FC = () => {
           </TitleContainer>
           <NewsContainer>
             <NewsBlurbs>
-              {/* <div> */}
-                {/* found and a potential answer but don't know how to intepret it 
-                https://stackoverflow.com/questions/42657792/typescript-react-redux-property-xxx-does-not-exist-on-type-intrinsicattrib */}
                 {/* using functional programming*/}
                 {articles.map((article)=> {return   <Articles article={article} />})}
-              {/* </div > */}
             </NewsBlurbs>
           </NewsContainer>
         </ColumnsContainer>
