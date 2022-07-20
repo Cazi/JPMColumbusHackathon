@@ -13,20 +13,22 @@ const TitleContainer = styled.div`
 
 `;
 const TitleStyled = styled.p`
-  color: black;
-  padding: 10px;
+  color: #324b4e;
+  padding: 26px;
+  font-size: 24px;
+  font-weight: bold;
 
 `;
 
 const WhoWeAreContainer = styled.p`
-
+ color: #324b4e;
 `;
 
 const WhatWeDoContainer = styled.p`
-  
+ color: #324b4e;
 `;
 const LearnMoreContainer = styled.p`
-  
+ color: #324b4e;
 `;
 
 
