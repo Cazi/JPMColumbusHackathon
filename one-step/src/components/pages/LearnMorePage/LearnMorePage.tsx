@@ -69,6 +69,18 @@ const LearnMoreContainer = styled.p`
  color: #324b4e;
 `;
 
+const StyledFooter = styled.footer`
+  display: flex;
+  justify-content: center;
+  border-style: solid;
+  border-radius: 20px;
+  padding: 26px;
+  margin: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #324b4e;
+`;
+
 
 const LearnMorePage: FC = () => {
   return (
@@ -77,79 +89,95 @@ const LearnMorePage: FC = () => {
         Who We Are
       </HeaderStyled>
       <ContentStyled>
-          <ColumnsDivs>
-            <AboutMe>
-              <MyFace src={aaron}></MyFace>
-              <ul>
-                <li>Aaron Amankwaah</li>
-                <li>Rutgers University</li>
-                <li>Advancing Black Pathways Fellow</li>
-                <li>Software Engineering Track</li>
-              </ul>
-            </AboutMe>
-            <AboutMe>
-              <MyFace src={myra}></MyFace>
-              <ul>
-                <li>Myra Anigbo</li>
-                <li>Bucknell University</li>
-                <li>Advancing Black Pathways Fellow</li>
-                <li>Software Engineering Track</li>
-              </ul>
-            </AboutMe>
-            <AboutMe>
-              <MyFace src={ruben}></MyFace>
-              <ul>
-                <li>Ruben Carbajal</li>
-                <li>Boston University</li>
-                <li>Advancing Hispanics Latinos Fellow</li>
-                <li>Software Engineering Track</li>
-              </ul>
-            </AboutMe>
-          </ColumnsDivs>
-          <ColumnsDivs>
+        <ColumnsDivs>
           <AboutMe>
-              <MyFace src={ayo}></MyFace>
-              <ul>
-                <li>Ayo Obisesan</li>
-                <li>Miami University</li>
-                <li>Advancing Black Pathways Fellow</li>
-                <li>Software Engineering Track</li>
-              </ul>
-            </AboutMe>
-            <AboutMe>
-              <MyFace src={caziah}></MyFace>
-              <ul>
-                <li>Caziah Mayers</li>
-                <li>Brown University</li>
-                <li>Advancing Black Pathways Fellow</li>
-                <li>Software Engineering Track</li>
-              </ul>
-            </AboutMe>
-          </ColumnsDivs>
+            <MyFace src={aaron}></MyFace>
+            <ul>
+              <li>Aaron Amankwaah</li>
+              <li>Rutgers University</li>
+              <li>Advancing Black Pathways Fellow</li>
+              <li>Software Engineering Track</li>
+            </ul>
+          </AboutMe>
+          <AboutMe>
+            <MyFace src={myra}></MyFace>
+            <ul>
+              <li>Myra Anigbo</li>
+              <li>Bucknell University</li>
+              <li>Advancing Black Pathways Fellow</li>
+              <li>Software Engineering Track</li>
+            </ul>
+          </AboutMe>
+          <AboutMe>
+            <MyFace src={ruben}></MyFace>
+            <ul>
+              <li>Ruben Carbajal</li>
+              <li>Boston University</li>
+              <li>Advancing Hispanics Latinos Fellow</li>
+              <li>Software Engineering Track</li>
+            </ul>
+          </AboutMe>
+        </ColumnsDivs>
+        <ColumnsDivs>
+          <AboutMe>
+            <MyFace src={ayo}></MyFace>
+            <ul>
+              <li>Ayo Obisesan</li>
+              <li>Miami University</li>
+              <li>Advancing Black Pathways Fellow</li>
+              <li>Software Engineering Track</li>
+            </ul>
+          </AboutMe>
+          <AboutMe>
+            <MyFace src={caziah}></MyFace>
+            <ul>
+              <li>Caziah Mayers</li>
+              <li>Brown University</li>
+              <li>Advancing Black Pathways Fellow</li>
+              <li>Software Engineering Track</li>
+            </ul>
+          </AboutMe>
+        </ColumnsDivs>
       </ContentStyled>
-      <br/>
-      
+      <br />
+
       <HeaderStyled>
         What We Do
       </HeaderStyled>
       <CenterDisplay>
         <WhatWeDoContainer>
-          <p><b>Problem: </b>For 44 million Americans, stress is created by the burden of a combined 
-            1.7 trillion dollars in student loan debt. Education is suppose to improve quality of life, but many feel hopeless when it comes to the expenses of higher education. Many lack the resources, 
+          <p><b>Problem: </b>For 44 million Americans, stress is created by the burden of a combined
+            1.7 trillion dollars in student loan debt. Education is suppose to improve quality of life, but many feel hopeless when it comes to the expenses of higher education. Many lack the resources,
             knowledge, and planning needed to alleviate student debt.</p>
-          <p><b>Solution: </b>Many don’t know where to start when it comes to tackling their student loans. 
-          That’s where One Step comes in. One Step is a website to help navigate those who need help with handling their loans. 
-          Our web page includes a loan calculator, news, and forgiveness resources to aid in student loan journeys. </p>
-          <p><b>Future Plans: </b>Our hope is to empower people to have the confidence to pay off their loans. 
-          Everyone should pursue a higher education without having to be burdened by student debt. We want to increase 
-          awareness about tools that the public may not know about. We will help you in your journey, one step at a time.</p>
+          <p><b>Solution: </b>Many don’t know where to start when it comes to tackling their student loans.
+            That’s where One Step comes in. One Step is a website to help navigate those who need help with handling their loans.
+            Our web page includes a loan calculator, news, and forgiveness resources to aid in student loan journeys. </p>
+          <p><b>Future Plans: </b>Our hope is to empower people to have the confidence to pay off their loans.
+            Everyone should pursue a higher education without having to be burdened by student debt. We want to increase
+            awareness about tools that the public may not know about. We will help you in your journey, one step at a time.</p>
         </WhatWeDoContainer>
       </CenterDisplay>
       <br />
       <HeaderStyled>
         Learn More
       </HeaderStyled>
-
+      <br />
+      <br />
+      <HeaderStyled>
+        Acknowledgements and Appreciation
+      </HeaderStyled>
+      <StyledFooter>
+        We want to give a huge thank you to the following people for guiding us in our learning process during this hackathon.
+        As mentors, you’ve spent invaluable time and energy helping us become better programmers, teammembers, and students.
+        We’ve gained so much experience, and it’s all thanks to you all.
+        <br />
+        <br />
+        Ahmed Adbulahi, Alyssa J.C. Alleyne-Atherly, Amie C. Jagne, Eric Chang, Gail Mitchell-Cousar, Harry Colson, Jermontae Ponder
+        Kendallene Hill, Malcolm D. Player, Matthew E. Baker, Matthew E. Miller, Sam Florentine, Susanne R. South, Tamia L. Stewart, and
+        Todd Tarney, and the wider ABP/AHL staff.
+      </StyledFooter>
+      <br />
+      <br />
     </LearnMorePageContainer>
   );
 };
