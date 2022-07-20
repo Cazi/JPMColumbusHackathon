@@ -33,7 +33,7 @@ const StyledSubTitle = styled.h1`
 
 // News Column blurb container
 const ColumnsContainer = styled.div`
-  color: black;
+  color: #324b4e;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -139,10 +139,10 @@ const HomePage: FC = () => {
           </div>
 <br/>
           <div>
-          <strong> When to Pay </strong>
-          {/* <ImageFacts src= "thenounproject.com/search/icons/?iconspage=1&q=payment"> </ImageFacts> */}
-          <ImageFacts src= "https://static.thenounproject.com/png/105293-200.png"></ImageFacts>         
-            <p> Most federal loans such as Subsidized and Unsubsidized loans distributed by the federal government provide a six-month grace period before having to make the first payment</p>
+          <strong>Discharges </strong>
+          {/* <ImageFacts src= "https://thenounproject.com/search/icons/?iconspage=1&q=free"> </ImageFacts> */}
+          <ImageFacts src= "https://static.thenounproject.com/png/1902720-200.png"></ImageFacts>
+            <p>  If external circumstances occur, such as disability or possible degree fraud, one can be exempt from paying back their student loans </p>
           </div>
 <br/>
           <div>
@@ -160,10 +160,10 @@ const HomePage: FC = () => {
           </div>
 <br/>
           <div>
-          <strong>Discharges </strong>
-          {/* <ImageFacts src= "https://thenounproject.com/search/icons/?iconspage=1&q=free"> </ImageFacts> */}
-          <ImageFacts src= "https://static.thenounproject.com/png/1902720-200.png"></ImageFacts>
-            <p>  If external circumstances occur, such as disability or possible degree fraud, one can be exempt from paying back their student loans </p>
+          <strong> When to Pay </strong>
+          {/* <ImageFacts src= "thenounproject.com/search/icons/?iconspage=1&q=payment"> </ImageFacts> */}
+          <ImageFacts src= "https://static.thenounproject.com/png/105293-200.png"></ImageFacts>         
+            <p> Most federal loans such as Subsidized and Unsubsidized loans distributed by the federal government provide a six-month grace period before having to make the first payment</p>
           </div>
 
           {/* <div>

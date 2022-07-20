@@ -93,7 +93,7 @@ const ForgivenessPage: FC = () => {
           Forgiveness
         </StyledTitle> */}
         <StyledSubtitle>
-          Opportunities for Loan Forgiveness for Specified Groups
+          Loan Forgiveness Opportunities for Specified Groups
         </StyledSubtitle>
       </TitleContainer>
       {/* <hr /> */}
