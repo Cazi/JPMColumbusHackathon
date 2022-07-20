@@ -2,6 +2,7 @@ import { FC } from "react";
 import styled from "styled-components";
 import { PATHS } from "../../../constants";
 import NavBarButton from "../../atoms/NavBarButton";
+import AccountButton from "../../atoms/AccountButton";
 
 const NavBarContainer = styled.div`
   display: flex;
@@ -28,11 +29,34 @@ const TitleContainer = styled.div`
   width: 100%;
   text-align: center;
 `;
+
+const ExtraDiv = styled.div`
+  display: flex;
+  align-items: row;
+  justify-content: space-around;
+`
+
+const AdjustDiv = styled.div`
+  padding-left: 500px;
+`
+
+const LoginLogout = styled.div`
+  display: flex;
+  align-items: row;
+  justify-content: center;
+
+`
 const NavBar: FC = () => {
   return (
     <NavBarContainer>
       <TitleContainer>
-        <StyledTitle>One Step</StyledTitle>
+        <ExtraDiv>
+          <AdjustDiv><StyledTitle>One Step</StyledTitle></AdjustDiv>
+          <LoginLogout>
+            <AccountButton title="Login" to={PATHS.LOGIN}></AccountButton>
+            <AccountButton title="Register" to={PATHS.REGISTER}></AccountButton>
+          </LoginLogout>
+        </ExtraDiv>
         <hr/>
       </TitleContainer>
       <ButtonContainer>

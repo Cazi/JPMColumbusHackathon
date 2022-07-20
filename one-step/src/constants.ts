@@ -4,4 +4,6 @@ export const PATHS = {
   CALCULATOR: "/calculator",
   FORGIVENESS: "/forgive",
   LEARN_MORE: "/learn",
+  LOGIN: "/login",
+  REGISTER: "/register",
 };
