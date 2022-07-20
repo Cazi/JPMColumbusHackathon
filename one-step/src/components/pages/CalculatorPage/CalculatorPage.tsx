@@ -2,20 +2,34 @@ import { FC, FormEvent, MouseEvent } from "react";
 import styled from "styled-components";
 
 const CalculatorPageContainer = styled.div`
-  height: 150%;
-  width: 101.1%;
   background-color: #F0EBE3;
+  display: flex;
+  flex-direction: row;
 `;
  
 const CalculatorLocation = styled.div`
-  padding-top: 100px;
+  padding-top: 75px;
+  padding-left: 40px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   justify-content: space-around;
   height: 100vh;
 `;
- 
+const ColumnOne = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  background-color: blue;
+`;
+
+const ColumnTwo = styled.div`
+  display: flex;
+  flex-direction: column; 
+  width: 50%;
+  background-color: red;
+`;
+
 const CalculatorFrame = styled.div`
   background-color: #e4dccf!important;
   border: 1.6px solid #324b4e;
@@ -144,7 +158,8 @@ const buttonHandler = async (event: MouseEvent<HTMLInputElement>) => {
  
 const CalculatorPage: FC = () => { 
   return <CalculatorPageContainer>
-    <CalculatorLocation>
+
+    <ColumnOne> <CalculatorLocation>
       <CalculatorFrame>
         <CalculatorForm onSubmit={sendForm}>
           <b>Loan Amount</b>
@@ -171,6 +186,9 @@ const CalculatorPage: FC = () => {
         <h2><div id="total-interest">Total Interest Paid: </div> </h2>
       </CalculatedDisplay>
     </CalculatorLocation>
+    </ColumnOne>
+    <ColumnTwo> <p>wasd</p>
+    </ColumnTwo>
     </CalculatorPageContainer>;
 };
  
