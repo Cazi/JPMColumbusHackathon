@@ -60,7 +60,8 @@ const NavBar: FC = () => {
         <hr/>
       </TitleContainer>
       <ButtonContainer>
-        <NavBarButton title="Home" to={PATHS.HOME}></NavBarButton>
+        <NavBarButton title="My Steps" to={PATHS.STEPS}></NavBarButton>
+        <NavBarButton title="News" to={PATHS.NEWS}></NavBarButton>
         <NavBarButton title="Calculator" to={PATHS.CALCULATOR}></NavBarButton>
         <NavBarButton title="Forgiveness" to={PATHS.FORGIVENESS}></NavBarButton>
         <NavBarButton title="About Us" to={PATHS.LEARN_MORE}></NavBarButton>
