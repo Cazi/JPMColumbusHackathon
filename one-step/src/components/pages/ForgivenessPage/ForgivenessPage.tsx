@@ -52,11 +52,12 @@ const TeacherSectionContainer = styled.div`
 const StyledTitle = styled.h1`
   margin-block-start: none;
   margin-top: none;
-  color: black;
+  color: #324b4e;;
   text-align: center;
 `;
 const StyledSubtitle = styled.h3`
-  color: black;
+  color: #324b4e;
+  font-size: 18px;
   text-align: center;
 `;
 
@@ -79,6 +80,7 @@ const ParagraphStyled = styled.p`
   justify-content: flex-start;
   font-family: sans-serif;
   text-align: left-center;
+  color: #324b4e;
   margin: 20px;
 `;
 
@@ -87,6 +89,7 @@ const UnorderedListStyled = styled.ul`
   margin: 0;
   vertical-align: left;
   background-color: #F0EBE3;
+  color: #324b4e;
 `;
 
 const ForgivenessPage: FC = () => {
@@ -97,7 +100,7 @@ const ForgivenessPage: FC = () => {
           Forgiveness
         </StyledTitle> */}
         <StyledSubtitle>
-          Opportunities for Loan Forgiveness for Specified Groups
+          Loan Forgiveness Opportunities for Specified Groups
         </StyledSubtitle>
       </TitleContainer>
       {/* <hr /> */}
