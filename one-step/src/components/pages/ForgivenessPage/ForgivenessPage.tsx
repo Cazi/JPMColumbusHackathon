@@ -1,9 +1,9 @@
 //
 import { FC } from "react";
 import styled from "styled-components";
-import teacher from './Teacher.png';
-import veteran from './Veteran.png'
-import DisabledPersons from './DisabledPersons.png'
+import teacher from '../../images/Teacher.png';
+import veteran from '../../images/Veteran.png'
+import DisabledPersons from '../../images/DisabledPersons.png'
 //import disabilityIcon;
 //import veteran
 const ForgivenessPageContainer = styled.div`
