@@ -1,5 +1,7 @@
 import { FC } from "react";
 import styled from "styled-components";
+import { myData } from "../../organisms/LoanPaydownChart/Data";
+import LoanPaydownChart from "../../organisms/LoanPaydownChart/StepsChart";
 
 const MyStepsPageContainer = styled.div`
     height: 100vh;
@@ -9,7 +11,7 @@ const MyStepsPageContainer = styled.div`
 const MyStepsPage: FC = () => {
     return(
         <MyStepsPageContainer>
-            My Steps
+            <LoanPaydownChart data={myData} />
         </MyStepsPageContainer>
     )
 }
