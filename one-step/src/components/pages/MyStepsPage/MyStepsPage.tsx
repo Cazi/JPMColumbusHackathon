@@ -1,5 +1,7 @@
 import { FC } from "react";
 import styled from "styled-components";
+import news from "../../images/newspaper.png";
+import calc from "../../images/calculator.png";
 import { myData } from "../../organisms/LoanPaydownChart/Data";
 import LoanPaydownChart from "../../organisms/LoanPaydownChart/StepsChart";
 
@@ -15,7 +17,9 @@ const ChartContainer = styled.div`
 `
 
 const TitleContainer = styled.div`
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
 `
 
 const BoxedContainer = styled.div`
@@ -28,28 +32,107 @@ const BoxedContainer = styled.div`
 `
 
 const CalculatorBox = styled.div`
+    display: flex;
     height: 500px;
     width: 600px;
-    background-color: gray;
+    background-color: #576F72;
+    border-style: solid;
+    border-radius: 50px;
+    padding-top: 25px;
+    padding-left: 25px;
+    flex-direction: column;
+`
+
+const ImageLocation = styled.div`
+    display: flex;
+    justify-content: center;
 `
 
 const NewsBox = styled.div`
+    display: flex;
     height: 500px;
     width: 600px;
-    background-color: gray;
+    background-color: #576F72;
+    border-style: solid;
+    border-radius: 50px;
+    padding-top: 25px;
+    padding-left: 25px;
+    flex-direction: column;
 `
+const ImageHold = styled.img`
+    height: 200px;
+    width: 200px;
+`
+
+const TextBoxDiv = styled.div`
+`
+
+const ParagraphConstraint = styled.div`
+    padding: 10px;
+`
+const HeaderConstraint = styled.div`
+    display: flex;
+    justify-content: center;
+`
+
+const ParagraphChange = styled.p`
+    color: red;
+`
+
+const BoldChange = styled.b`
+    color: black;
+    font-size: 25px;
+`
+
 
 const MyStepsPage: FC = () => {
     return(
         <MyStepsPageContainer>
-            <TitleContainer><h1>Welcome to One Step</h1></TitleContainer>
+            <TitleContainer><h1>Welcome to One Step!</h1></TitleContainer>
             <ChartContainer>
-                <h2>My Steps: </h2>
+                <ParagraphChange><BoldChange>My Steps: </BoldChange> It appears that you are not logged in! Register today to get your graph up to date!</ParagraphChange>
                <LoanPaydownChart data={myData} /> 
             </ChartContainer>
             <BoxedContainer>
-                <CalculatorBox>s</CalculatorBox>
-                <NewsBox>f</NewsBox>
+                <CalculatorBox>
+                    <ImageLocation>
+                        <a href="/calculator"><ImageHold src={calc}></ImageHold></a>
+                    </ImageLocation>
+                    <TextBoxDiv>
+                        <ParagraphConstraint>
+                            <HeaderConstraint>
+                                <h1>My Calculator</h1>
+                            </HeaderConstraint>
+                            <p>The One Step Calculator syncs with your graph to ensure that you are
+                                one step closer to getting rid of your student loans. It utilizes the current
+                                amount of your loan, the current interest rate of your loan, and the number of years you
+                                plan to pay it to give you your monthly estimate of pay on that loan.
+                            </p>
+                            
+                            <p><a href="/calculator">Access My Calculator</a></p>
+                        </ParagraphConstraint>
+                    </TextBoxDiv>
+                </CalculatorBox>
+                <NewsBox>
+                    <ImageLocation>
+                        <a href="/news"><ImageHold src={news}></ImageHold></a>
+                    </ImageLocation>
+                    <TextBoxDiv>
+                        <ParagraphConstraint>
+                            <HeaderConstraint>
+                                <h1>My News</h1>
+                            </HeaderConstraint>
+                            <p>One Step caters news for you in correspondence to what is happening with 
+                                student loans in your community. With your news being readily available to you, 
+                                you never need to worry about what may be happening with student loans. Keep up 
+                                to date on your student loan news so you can be one step closer to getting rid of 
+                                your student loans.
+                            </p>
+                            
+                            <p><a href="/news">Access My News</a></p>
+                        </ParagraphConstraint>
+                    </TextBoxDiv>
+                </NewsBox>
             </BoxedContainer>
         </MyStepsPageContainer>
     )
