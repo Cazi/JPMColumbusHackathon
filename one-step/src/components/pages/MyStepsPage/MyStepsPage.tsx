@@ -20,6 +20,8 @@ const TitleContainer = styled.div`
     display: flex;
     justify-content: center;
     padding-top: 20px;
+    color: #324b4e;
+    font-size: 18px;
 `
 
 const BoxedContainer = styled.div`
@@ -41,6 +43,7 @@ const CalculatorBox = styled.div`
     padding-top: 25px;
     padding-left: 25px;
     flex-direction: column;
+    color: #324b4e;
 `
 
 const ImageLocation = styled.div`
@@ -58,6 +61,7 @@ const NewsBox = styled.div`
     padding-top: 25px;
     padding-left: 25px;
     flex-direction: column;
+    color: #324b4e;
 `
 const ImageHold = styled.img`
     height: 200px;
@@ -77,10 +81,11 @@ const HeaderConstraint = styled.div`
 
 const ParagraphChange = styled.p`
     color: red;
+    font-weight: bold;
 `
 
 const BoldChange = styled.b`
-    color: black;
+    color: #324b4e;
     font-size: 25px;
 `
 

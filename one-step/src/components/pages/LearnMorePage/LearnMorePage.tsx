@@ -67,12 +67,13 @@ const WhatWeDoContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  border-style: solid;
-  border-radius: 50px;
+  border: 3px solid #324b4e;
+  border-radius: 15px;
+  background-color: #e4dccf;
   padding: 20px;
   margin: 10px;
-  color: #324b4e;
   width: 60%;
+  color: #324b4e;
 `;
 const LearnMoreContainer = styled.p`
  color: #324b4e;
@@ -81,11 +82,12 @@ const LearnMoreContainer = styled.p`
 const MissionStatementContainer = styled.div`
   display: flex;
   justify-content: center;
-  border-style: solid;
-  border-radius: 20px;
   padding: 26px;
   margin: 20px;
   font-size: 24px;
+  border: 3px solid #324b4e;
+  border-radius: 15px;
+  background-color: #e4dccf;
   color: #324b4e;
 `;
 const MissionStatement = styled.p`
@@ -96,13 +98,14 @@ const MissionStatement = styled.p`
 const StyledFooter = styled.footer`
   display: flex;
   justify-content: center;
-  border-style: solid;
-  border-radius: 20px;
   padding: 26px;
   margin: 20px;
   font-size: 17px;
   font-weight: bold;
   color: #324b4e;
+  border: 3px solid #324b4e;
+  border-radius: 15px;
+  background-color: #e4dccf;
 `;
 
 const LearnMorePage: FC = () => {
