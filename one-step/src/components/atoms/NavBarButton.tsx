@@ -32,7 +32,7 @@ interface NavBarButtonProps {
 }
 
 
-const NavBarButton: FC<NavBarButtonProps> = ({ title, to, ...props }) => {
+const NavBarButton: FC<NavBarButtonProps> = ({title, to, ...props }) => {
   const navigate = useNavigate();
   const [hover, setHover] = useState<boolean>();
   const handleMouseIn = () => {

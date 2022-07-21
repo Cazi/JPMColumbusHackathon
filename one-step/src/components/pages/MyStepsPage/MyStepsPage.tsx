@@ -80,6 +80,7 @@ const HeaderConstraint = styled.div`
 `
 
 const ParagraphChange = styled.p`
+    text-align: center;
     color: red;
     font-weight: bold;
 `
@@ -91,12 +92,17 @@ const BoldChange = styled.b`
 
 
 const MyStepsPage: FC = () => {
-    return(
+    return (
         <MyStepsPageContainer>
             <TitleContainer><h1>Welcome to One Step!</h1></TitleContainer>
             <ChartContainer>
-                <ParagraphChange><BoldChange>My Steps: </BoldChange> It appears that you are not logged in! Register today to get your graph up to date!</ParagraphChange>
-               <LoanPaydownChart data={myData} /> 
+                <ParagraphChange>
+                    <BoldChange>My Steps</BoldChange>
+                    <br />
+                    <br />
+                    It appears that you are not logged in! Register today to get your graph up to date!
+                </ParagraphChange>
+                <LoanPaydownChart data={myData} />
             </ChartContainer>
             <BoxedContainer>
                 <CalculatorBox>
@@ -113,7 +119,7 @@ const MyStepsPage: FC = () => {
                                 amount of your loan, the current interest rate of your loan, and the number of years you
                                 plan to pay it to give you your monthly estimate of pay on that loan.
                             </p>
-                            
+
                             <p><a href="/calculator">Access My Calculator</a></p>
                         </ParagraphConstraint>
                     </TextBoxDiv>
@@ -127,13 +133,13 @@ const MyStepsPage: FC = () => {
                             <HeaderConstraint>
                                 <h1>My News</h1>
                             </HeaderConstraint>
-                            <p>One Step caters news for you in correspondence to what is happening with 
-                                student loans in your community. With your news being readily available to you, 
-                                you never need to worry about what may be happening with student loans. Keep up 
-                                to date on your student loan news so you can be one step closer to getting rid of 
+                            <p>One Step caters news for you in correspondence to what is happening with
+                                student loans in your community. With your news being readily available to you,
+                                you never need to worry about what may be happening with student loans. Keep up
+                                to date on your student loan news so you can be one step closer to getting rid of
                                 your student loans.
                             </p>
-                            
+
                             <p><a href="/news">Access My News</a></p>
                         </ParagraphConstraint>
                     </TextBoxDiv>
