@@ -53,8 +53,8 @@ const NewsBlurbs = styled.div`
   width: 100%;
   grid-template-columns: 100px 100px;
   flex-direction: column;
-  background-color: #e4dccf;
-  border: 1.6px solid #324b4e;
+  background-color: #e4dcf;
+  border: 1.6px solid #324B4E;
   border-radius: 15px;
 `;
 
@@ -62,9 +62,11 @@ const Container = styled.div`
 width: 100%;
 grid-template-columns: 100px 100px;
 flex-direction: column;
+border: 1.6px solid #324B4E;
 `;
 
 const Texts = styled.div`
+padding: 25px 10px 0px 10px;
 `;
 
 const Image = styled.div`
