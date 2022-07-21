@@ -16,6 +16,7 @@ const TitleContainer = styled.div`
   height: 150px;
   background-color: #F0EBE3;
   margin-top: 0px;
+  margin-bottom: 0px;
 
 `;
 const ContentStyled = styled.div`
@@ -30,11 +31,19 @@ const HeaderStyled = styled.div`
   display: flex;
   justify-content: center;
   color: #324b4e;
-  padding: 26px;
+  padding: 20px;
   font-size: 24px;
   font-weight: bold;
 `;
-
+const HeaderStyled2 = styled.div`
+  display: flex;
+  justify-content: center;
+  color: #324b4e;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 0px;
+`;
 const ColumnsDivs = styled.div`
 `
 
@@ -69,7 +78,7 @@ const LearnMoreContainer = styled.p`
  color: #324b4e;
 `;
 
-const StyledFooter = styled.footer`
+const MissionStatementContainer = styled.div`
   display: flex;
   justify-content: center;
   border-style: solid;
@@ -77,14 +86,38 @@ const StyledFooter = styled.footer`
   padding: 26px;
   margin: 20px;
   font-size: 24px;
+  color: #324b4e;
+`;
+const MissionStatement = styled.p`
+  font-size: 17px;
+
+`;
+
+const StyledFooter = styled.footer`
+  display: flex;
+  justify-content: center;
+  border-style: solid;
+  border-radius: 20px;
+  padding: 26px;
+  margin: 20px;
+  font-size: 17px;
   font-weight: bold;
   color: #324b4e;
 `;
 
-
 const LearnMorePage: FC = () => {
   return (
     <LearnMorePageContainer>
+        <HeaderStyled2>
+          What is One Step?
+        </HeaderStyled2>
+      <MissionStatementContainer>
+        <MissionStatement>
+          <strong>One Step</strong> was born out of a drive to help curb the overwhelming nature of student loans. Marginalized communities have a particularly difficult time navigating
+          and decifering the world of student loans, and so we created One Step to help guide our people towards becoming <strong>debt free</strong> one step at a time!
+        </MissionStatement>
+      </MissionStatementContainer>
+
       <HeaderStyled>
         Who We Are
       </HeaderStyled>
