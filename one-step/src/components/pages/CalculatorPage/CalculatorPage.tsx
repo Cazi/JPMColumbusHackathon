@@ -147,8 +147,8 @@ const sendForm = async (event: FormEvent<HTMLFormElement>) => {
   let highEnd:HTMLHeadingElement = document.getElementById("high-end") as HTMLHeadingElement;
   let totalInterest:HTMLHeadingElement = document.getElementById("total-interest") as HTMLHeadingElement;
 
-  calculate.innerText = 'Cost: $' + `${monthlyPayments}` + " in monthly payments";
-  highEnd.innerText = 'High-End Cost: $' + `${high}` + " in monthly payments";
+  calculate.innerText = 'Amount: $' + `${monthlyPayments}` + " in monthly payments";
+  highEnd.innerText = 'High-End Amount: $' + `${high}` + " in monthly payments";
   totalInterest.innerHTML = 'Total Interest Paid: $' + `${interestPaid}`; 
 }
 
