@@ -220,7 +220,10 @@ const CalculatorPage: FC = () => {
     <b>Moderate Monthly Payment</b>
     <p>The amount needed to pay to pay the loan in the full loan term</p>
 <br/>
-    <b>High End Monthly Payment</b>
+    <b>Subsidized Loan</b>
+    <p>The amount needed to pay the loan in half the time</p>
+<br/>
+    <b>Unsubsidized Loan</b>
     <p>The amount needed to pay the loan in half the time</p>
 <br/>
     </div>

@@ -40,6 +40,7 @@ const ColumnsContainer = styled.div`
   justify-content: flex-start;
   background-color: #f0ebe3;
   padding: 2.5px 2.5px 2.5px 2.5px;
+  padding-left: 10px
 `;
 
 // each news blurb contianer
