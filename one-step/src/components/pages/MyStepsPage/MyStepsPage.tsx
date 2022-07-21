@@ -35,9 +35,9 @@ const CalculatorBox = styled.div`
     display: flex;
     height: 500px;
     width: 600px;
-    background-color: #576F72;
-    border-style: solid;
-    border-radius: 50px;
+    border: 3px solid #324b4e;
+    border-radius: 15px;
+    background-color: #e4dccf;
     padding-top: 25px;
     padding-left: 25px;
     flex-direction: column;
@@ -52,9 +52,9 @@ const NewsBox = styled.div`
     display: flex;
     height: 500px;
     width: 600px;
-    background-color: #576F72;
-    border-style: solid;
-    border-radius: 50px;
+    border: 3px solid #324b4e;
+    border-radius: 15px;
+    background-color: #e4dccf;
     padding-top: 25px;
     padding-left: 25px;
     flex-direction: column;

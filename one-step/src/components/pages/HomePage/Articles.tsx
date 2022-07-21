@@ -4,9 +4,10 @@ import styled from 'styled-components';
 
 // background-color: yellow;
 const ArticleContainer = styled.div`
-border: 1.75px solid #e4dccf;
+border: 1.75px solid #324b4e;
 flex-direction: row;
-border-radius: 24px;
+border-radius: 15px;
+background-color: #e4dccf;
 `;
 const Card = styled.div`
 display: inline-block;
