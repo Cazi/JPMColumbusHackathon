@@ -99,9 +99,8 @@ const MyStepsPage: FC = () => {
                 <ParagraphChange>
                     <BoldChange>My Steps</BoldChange>
                     <br />
-                    <br />
-                    It appears that you are not logged in! Register today to get your graph up to date!
-                    <h4> Below is a graph of your loan amount since inception. Looks like your on track to fully pay everything off!</h4>
+                    {/* It appears that you are not logged in! Register today to get your graph up to date! */}
+                        <TitleContainer> <h4> Below is a graph of your loan amount since inception. Looks like your on track to fully pay everything off!</h4></TitleContainer>
                 </ParagraphChange>
                 <LoanPaydownChart data={myData} />
             </ChartContainer>

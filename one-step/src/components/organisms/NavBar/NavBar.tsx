@@ -61,9 +61,9 @@ const NavBar: FC = () => {
       </TitleContainer>
       <ButtonContainer>
         <NavBarButton title="My Steps" to={PATHS.STEPS}></NavBarButton>
-        <NavBarButton title="News" to={PATHS.NEWS}></NavBarButton>
         <NavBarButton title="Calculator" to={PATHS.CALCULATOR}></NavBarButton>
         <NavBarButton title="Forgiveness" to={PATHS.FORGIVENESS}></NavBarButton>
+        <NavBarButton title="News" to={PATHS.NEWS}></NavBarButton>
         <NavBarButton title="About Us" to={PATHS.LEARN_MORE}></NavBarButton>
       </ButtonContainer>
     </NavBarContainer>
