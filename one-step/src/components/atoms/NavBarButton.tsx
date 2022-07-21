@@ -19,7 +19,6 @@ const NavButton = styled.button`
   transition-duration: 0.7s;
   cursor: pointer;
 `
-
 const NavBarButtonText = styled.div`
   background-color: Transparent;
     background-repeat:no-repeat;
