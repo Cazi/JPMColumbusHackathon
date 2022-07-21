@@ -1,6 +1,7 @@
-import {FC} from "react";
+import { FC } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 
 const AccountButtonContainer = styled.div`
   padding-top: 22px;
@@ -10,26 +11,41 @@ const AccountButtonContainer = styled.div`
 
 const AccButton = styled.button`
   background-color: #7d9d9c;
-  border: 2px solid #7d9d9c;
-  border-radius: 3px;
+  border: 2.5px solid;
+  border-radius: 10px;
   height: 35px;
   width: 100px;
-  transition-duration: 0.4s;
+  transition-duration: 0.7s;
   cursor: pointer;
 `
 
 interface AccountButtonProps {
-    title: string;
-    to: string;
+  title: string;
+  to: string;
 }
 
-const AccountButton : FC<AccountButtonProps> = ({title, to, ...props}) => {
-    const navigate = useNavigate();
+const AccountButton: FC<AccountButtonProps> = ({ title, to, ...props }) => {
+  const navigate = useNavigate();
+  const [hover, setHover] = useState<boolean>();
+  const handleMouseIn = () => {
+    setHover(true);
+  };
+
+  const handleMouseOut = () => {
+    setHover(false);
+  };
 
   return (
     <AccountButtonContainer>
-      <AccButton onClick={() => navigate(to)}>{title} </AccButton>
-     
+      <AccButton onClick={() => navigate(to)}
+        onMouseOver={handleMouseIn}
+        onMouseOut={handleMouseOut}
+        style={{
+          backgroundColor: hover ? 'salmon' : '#7d9d9c',
+        }}>
+        {title}
+      </AccButton>
+
     </AccountButtonContainer>
   );
 };

@@ -10,11 +10,10 @@ const NavBarButtonContainer = styled.div`
 `;
 
 const NavButton = styled.button`
-  background-color: #576F72;
-  border: 2px solid #909C9E;
+  background-color: #7d9d9c;
   border: 2.5px solid;
   border-radius: 10px;
-  height: 30px;
+  height: 35px;
   width: 120px;
   transition-duration: 0.7s;
   cursor: pointer;
@@ -26,9 +25,6 @@ const NavBarButtonText = styled.div`
     cursor:pointer;
     overflow: hidden;   
 `;
-
-
-
 
 interface NavBarButtonProps {
   title: string;
@@ -54,7 +50,7 @@ const NavBarButton: FC<NavBarButtonProps> = ({ title, to, ...props }) => {
         onMouseOver={handleMouseIn}
         onMouseOut={handleMouseOut}
         style={{
-          backgroundColor: hover ? 'salmon' : '#576F72',
+          backgroundColor: hover ? 'salmon' : '',
         }}>
         {title}
       </NavButton>
