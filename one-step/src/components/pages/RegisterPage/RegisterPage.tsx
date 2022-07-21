@@ -80,7 +80,6 @@ const RegisterPage: FC = () => {
         <RegisterPageContainer>
             <RegisterLocation>
                 <RegisterFrame>
-                    <RegisterForm>
                         <HeaderLocation>
                            <h1>Please Register</h1> 
                         </HeaderLocation>
@@ -92,9 +91,8 @@ const RegisterPage: FC = () => {
                         <PadDiv />
                         <RegisterInput placeholder="Password" type="password"/>
                         <PadDiv>
-                           <RegisterButton> <a href="/login"> Register </a> </RegisterButton>
+                          <a href="/login"><RegisterButton>Register</RegisterButton></a> 
                         </PadDiv>
-                    </RegisterForm>
                 </RegisterFrame>
             </RegisterLocation>
         </RegisterPageContainer>

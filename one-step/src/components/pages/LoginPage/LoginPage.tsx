@@ -80,7 +80,6 @@ const LoginPage: FC = () => {
         <LoginPageContainer>
             <LoginLocation>
                 <LoginFrame>
-                    <LoginForm>
                         <HeaderLocation>
                            <h1>Profile Login</h1> 
                         </HeaderLocation>
@@ -88,9 +87,8 @@ const LoginPage: FC = () => {
                         <PadDiv />
                         <LoginInput placeholder="Password" type="password"/>
                         <PadDiv>
-                            <LoginButton> <a href = "/my-steps" >Login </a></LoginButton>
+                            <a href = "/my-steps" ><LoginButton>Login</LoginButton></a>
                         </PadDiv>
-                    </LoginForm>
                 </LoginFrame>
             </LoginLocation>
         </LoginPageContainer>
