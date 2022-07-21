@@ -9,42 +9,42 @@ import DisabledPersons from '../../images/DisabledPersons.png'
 const ForgivenessPageContainer = styled.div`
   height: 100vh;
   background-color: #F0EBE3;
-  border: 1px solid #e4dccf;
+  border: 2px solid #e4dccf;
 `;
 
 const BodyContainer = styled.div`
   background-color: #F0EBE3;
-  border: 2px solid #e4dccf;
+  border: 3px solid #e4dccf;
   width: 100%;
 `;
 const VeteranSectionContainer = styled.div`
-  background-color: #F0EBE3;
-  border: 1.75px solid #e4dccf;
+  background-color: #E4DCCF;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  border-style: solid;
-  border-radius: 50px;
+  border: 1.6px solid #324b4e;
+  border-radius: 15px;
   padding: 20px;
   margin: 10px;
 `;
 const DisabledSectionContainer = styled.div`
+  background-color: #E4DCCF;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  border-style: solid;
-  border-radius: 50px;
-  border: 1.75px solid #e4dccf;
+  border: 1.6px solid #324b4e;
+  border-radius: 15px;
   padding: 20px;
   margin: 10px;
 `;
 const TeacherSectionContainer = styled.div`
+  background-color: #E4DCCF;
   display: flex;
   border: 1.75px solid #e4dccf;
   flex-direction: column;
   justify-content: flex-start;
-  border-style: solid;
-  border-radius: 50px;
+  border: 1.6px solid #324b4e;
+  border-radius: 15px;
   padding: 20px;
   margin: 10px;
 `;
@@ -88,7 +88,7 @@ const UnorderedListStyled = styled.ul`
   //padding-left: 20px;
   margin: 0;
   vertical-align: left;
-  background-color: #F0EBE3;
+  background-color: #E4DCCF;
   color: #324b4e;
 `;
 
