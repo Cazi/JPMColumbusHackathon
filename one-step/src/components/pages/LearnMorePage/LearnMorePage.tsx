@@ -122,7 +122,7 @@ const LearnMorePage: FC = () => {
           <MissionStatementContainer>
             <MissionStatement>
               <strong>One Step</strong> was born out of a drive to help curb the overwhelming nature of student loans. Marginalized communities have a particularly difficult time navigating
-              and decifering the world of student loans, and so we created One Step to help guide our people towards becoming <strong>debt free</strong> one step at a time!
+              and deciphering the world of student loans, and so we created One Step to help guide our people towards becoming <strong>debt free</strong> one step at a time!
             </MissionStatement>
           </MissionStatementContainer>
         </CenterDisplay>
