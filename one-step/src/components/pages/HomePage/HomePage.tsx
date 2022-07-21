@@ -49,24 +49,22 @@ const NewsContainer = styled.div`
 `;
 
 // news blurbs
-// background: red;
 const NewsBlurbs = styled.div`
   width: 100%;
-
   grid-template-columns: 100px 100px;
   flex-direction: column;
+  background-color: #e4dccf;
+  border: 1.6px solid #324b4e;
+  border-radius: 15px;
 `;
 
 const Container = styled.div`
 width: 100%;
-background: red;
 grid-template-columns: 100px 100px;
 flex-direction: column;
-
 `;
 
 const Texts = styled.div`
-
 `;
 
 const Image = styled.div`
