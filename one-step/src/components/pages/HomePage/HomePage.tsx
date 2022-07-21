@@ -40,6 +40,7 @@ const ColumnsContainer = styled.div`
   justify-content: flex-start;
   background-color: #f0ebe3;
   padding: 2.5px 2.5px 2.5px 2.5px;
+  padding-left: 10px
 `;
 
 // each news blurb contianer
@@ -49,24 +50,22 @@ const NewsContainer = styled.div`
 `;
 
 // news blurbs
-// background: red;
 const NewsBlurbs = styled.div`
   width: 100%;
-
   grid-template-columns: 100px 100px;
   flex-direction: column;
+  background-color: #e4dccf;
+  border: 1.6px solid #324b4e;
+  border-radius: 15px;
 `;
 
 const Container = styled.div`
 width: 100%;
-background: red;
 grid-template-columns: 100px 100px;
 flex-direction: column;
-
 `;
 
 const Texts = styled.div`
-
 `;
 
 const Image = styled.div`
@@ -90,8 +89,8 @@ const HomePage: FC = () => {
       const getArticles = async () => {
         setLoading(true);
         const res = await axios.get
-        (`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=studentloan&sort=newest&api-key=${process.env.REACT_APP_NYTIMES_API_KEY}`);
-        
+        (`https://api.nytimes.com/svc/search/v2/articlesearch.json?q={loan}&fq=student&api-key=${process.env.REACT_APP_NYTIMES_API_KEY}`);
+        // https://api.nytimes.com/svc/search/v2/articlesearch.json?q={loan}&fq=student&api-key=bG1QD3F95yxUAtJF2L97XdhvHQCo5cXM
         // not letting fetching news about loans.
         //  (`https://api.nytimes.com/svc/topstories/v2/Business.json?api-key=${process.env.REACT_APP_NYTIMES_API_KEY}`);
         setArticles(res.data.response.docs);

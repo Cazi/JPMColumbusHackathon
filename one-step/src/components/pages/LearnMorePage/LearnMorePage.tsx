@@ -119,6 +119,26 @@ const LearnMorePage: FC = () => {
       </MissionStatementContainer>
 
       <HeaderStyled>
+        What We Do
+      </HeaderStyled>
+      <CenterDisplay>
+        <WhatWeDoContainer>
+          <p><b>Problem: </b>For 44 million Americans, stress is created by the burden of a combined
+            1.7 trillion dollars in student loan debt. Education has the capacity to improve quality of life, but many feel hopeless when it comes to the expenses of higher education due to lack of resources,
+            knowledge, and planning.</p>
+          <p><b>Solution: </b>Many don’t know where to start when it comes to tackling student loans.
+            That’s where One Step comes in. One Step is a website designed to help manage student loans effectively.
+            Our web page includes a loan calculator, news, and forgiveness resources to aid in student loan journeys.  </p>
+          <p><b>Future Plans: </b>Our hope is to empower people by creating an effecient process to manage student loans.
+            Everyone should have the ability to pursue a higher education without the burden of student debt. We want to raise
+            awareness of loan management tools the public may not be aware of. We will help you on your journey, one step at a time.</p>
+        </WhatWeDoContainer>
+      </CenterDisplay>
+      <br />
+      
+      <br />
+      <br />
+      <HeaderStyled>
         Who We Are
       </HeaderStyled>
       <ContentStyled>
@@ -174,28 +194,7 @@ const LearnMorePage: FC = () => {
       </ContentStyled>
       <br />
 
-      <HeaderStyled>
-        What We Do
-      </HeaderStyled>
-      <CenterDisplay>
-        <WhatWeDoContainer>
-          <p><b>Problem: </b>For 44 million Americans, stress is created by the burden of a combined
-            1.7 trillion dollars in student loan debt. Education is suppose to improve quality of life, but many feel hopeless when it comes to the expenses of higher education. Many lack the resources,
-            knowledge, and planning needed to alleviate student debt.</p>
-          <p><b>Solution: </b>Many don’t know where to start when it comes to tackling their student loans.
-            That’s where One Step comes in. One Step is a website to help navigate those who need help with handling their loans.
-            Our web page includes a loan calculator, news, and forgiveness resources to aid in student loan journeys. </p>
-          <p><b>Future Plans: </b>Our hope is to empower people to have the confidence to pay off their loans.
-            Everyone should pursue a higher education without having to be burdened by student debt. We want to increase
-            awareness about tools that the public may not know about. We will help you in your journey, one step at a time.</p>
-        </WhatWeDoContainer>
-      </CenterDisplay>
-      <br />
-      <HeaderStyled>
-        Learn More
-      </HeaderStyled>
-      <br />
-      <br />
+
       <HeaderStyled>
         Acknowledgements and Appreciation
       </HeaderStyled>

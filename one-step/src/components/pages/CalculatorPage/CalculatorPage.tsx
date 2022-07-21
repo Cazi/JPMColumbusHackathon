@@ -2,27 +2,40 @@ import { FC, FormEvent, MouseEvent } from "react";
 import styled from "styled-components";
 
 const CalculatorPageContainer = styled.div`
-  height: 150%;
-  width: 101.1%;
   background-color: #F0EBE3;
+  display: flex;
+  flex-direction: row;
 `;
  
 const CalculatorLocation = styled.div`
-  padding-top: 100px;
+  padding-top: 95px;
+  padding-left: 40px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   justify-content: space-around;
   height: 100vh;
 `;
- 
+const ColumnOne = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+`;
+
+const ColumnTwo = styled.div`
+  display: flex;
+  flex-direction: column; 
+  width: 50%;
+`;
+
 const CalculatorFrame = styled.div`
   background-color: #e4dccf!important;
   border: 1.6px solid #324b4e;
   border-radius: 15px;
   font-size: 17px;
   height: 75%;
-  width: 45%;
+  width: 85%;
   padding-left: 35px;
   padding-top: 35px;
   margin-bottom: 35px;
@@ -79,7 +92,7 @@ const CalculatedDisplay = styled.div`
   border-radius: 15px;
   font-size: 16px;
   height: 50%;
-  width: 45%;
+  width: 75%;
   padding-left: 35px;
   margin-bottom: 90px;
 `;
@@ -92,6 +105,18 @@ const SwitchDiv = styled.div`
   display: flex;
   flex-direction: row;
 `
+const TitleSpace = styled.div`
+  width: 100%;
+  height: 2.5%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: #324b4e
+`;
+
+const StyledSubTitle = styled.h1`
+  color: #324b4e;
+`;
 
 const sendForm = async (event: FormEvent<HTMLFormElement>) => {
   event.preventDefault()
@@ -144,7 +169,8 @@ const buttonHandler = async (event: MouseEvent<HTMLInputElement>) => {
  
 const CalculatorPage: FC = () => { 
   return <CalculatorPageContainer>
-    <CalculatorLocation>
+
+    <ColumnOne> <CalculatorLocation>
       <CalculatorFrame>
         <CalculatorForm onSubmit={sendForm}>
           <b>Loan Amount</b>
@@ -166,11 +192,42 @@ const CalculatorPage: FC = () => {
         </CalculatorForm>
       </CalculatorFrame>
       <CalculatedDisplay>
-        <h2><div id="calculate">Cost: </div></h2>
-        <h2><div id="high-end">High-End Cost: </div></h2>
+        <h2><div id="calculate">Moderate Monthly Payment: </div></h2>
+        <h2><div id="high-end">High-End Monthly Payment: </div></h2>
         <h2><div id="total-interest">Total Interest Paid: </div> </h2>
       </CalculatedDisplay>
     </CalculatorLocation>
+    </ColumnOne>
+    <ColumnTwo> 
+      <TitleSpace>
+        <StyledSubTitle>
+          <p>Things to know</p>
+        </StyledSubTitle>
+      </TitleSpace>
+<br/>
+<br/>
+<br/>
+    <div>
+    <b>Loan Amount</b>
+    <p>The total amount of student loans you currently have or the amount you expected upon graduating</p>
+<br/>
+    <b>Loan Term</b>
+    <p>How long do you or the provider expect to be paying back this loan?</p>
+<br/>
+    <b>Interest Rate</b>
+    <p>The proportion of a loan that is charged as interest to the borrower</p>
+<br/>
+    <b>Moderate Monthly Payment</b>
+    <p>The amount needed to pay to pay the loan in the full loan term</p>
+<br/>
+    <b>Subsidized Loan</b>
+    <p>The amount needed to pay the loan in half the time</p>
+<br/>
+    <b>Unsubsidized Loan</b>
+    <p>The amount needed to pay the loan in half the time</p>
+<br/>
+    </div>
+    </ColumnTwo>
     </CalculatorPageContainer>;
 };
  
