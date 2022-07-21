@@ -101,6 +101,7 @@ const MyStepsPage: FC = () => {
                     <br />
                     <br />
                     It appears that you are not logged in! Register today to get your graph up to date!
+                    <h4> Below is a graph of your loan amount since inception. \n Looks like your on track to fully pay everything off!</h4>
                 </ParagraphChange>
                 <LoanPaydownChart data={myData} />
             </ChartContainer>
