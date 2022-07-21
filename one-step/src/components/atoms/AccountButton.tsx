@@ -3,11 +3,20 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
 const AccountButtonContainer = styled.div`
-height: 50px
-color: white;
-margin: 10px;
-background-color: #324B4E;
+  padding-top: 22px;
+  padding-left: 15px;
+  padding-right: 15px;
 `;
+
+const AccButton = styled.button`
+  background-color: #70ABAF;
+  border: 2px solid #white;
+  border-radius: 3px;
+  height: 35px;
+  width: 100px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+`
 
 interface AccountButtonProps {
     title: string;
@@ -19,7 +28,7 @@ const AccountButton : FC<AccountButtonProps> = ({title, to, ...props}) => {
 
   return (
     <AccountButtonContainer>
-      <button onClick={() => navigate(to)}>{title} </button>
+      <AccButton onClick={() => navigate(to)}>{title} </AccButton>
      
     </AccountButtonContainer>
   );

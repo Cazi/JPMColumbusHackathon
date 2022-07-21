@@ -4,11 +4,19 @@ import { useNavigate } from "react-router-dom";
 
 //Styled Div Definition
 const NavBarButtonContainer = styled.div`
-height: 50px
-color: white;
-margin: 10px;
-background-color: #324B4E;
+  padding-left: 25px;
+  padding-right: 25px;
 `;
+
+const NavButton = styled.button`
+  background-color: #576F72;
+  border: 2px solid #909C9E;
+  border-radius: 3px;
+  height: 30px;
+  width: 120px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+`
 
 const NavBarButtonText = styled.div`
 background-color: Transparent;
@@ -30,7 +38,7 @@ const NavBarButton: FC<NavBarButtonProps> = ({ title, to, ...props }) => {
   return (
     <NavBarButtonContainer>
       {/* <NavBarButtonText> */}
-      <button onClick={() => navigate(to)}>{title} </button>
+      <NavButton onClick={() => navigate(to)}>{title} </NavButton>
       {/* </NavBarButtonText> */}
      
     </NavBarButtonContainer>
