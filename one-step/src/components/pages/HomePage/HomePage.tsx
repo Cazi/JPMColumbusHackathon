@@ -90,8 +90,8 @@ const HomePage: FC = () => {
       const getArticles = async () => {
         setLoading(true);
         const res = await axios.get
-        (`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=studentloan&sort=newest&api-key=${process.env.REACT_APP_NYTIMES_API_KEY}`);
-        
+        (`https://api.nytimes.com/svc/search/v2/articlesearch.json?q={loan}&fq=student&api-key=${process.env.REACT_APP_NYTIMES_API_KEY}`);
+        // https://api.nytimes.com/svc/search/v2/articlesearch.json?q={loan}&fq=student&api-key=bG1QD3F95yxUAtJF2L97XdhvHQCo5cXM
         // not letting fetching news about loans.
         //  (`https://api.nytimes.com/svc/topstories/v2/Business.json?api-key=${process.env.REACT_APP_NYTIMES_API_KEY}`);
         setArticles(res.data.response.docs);
