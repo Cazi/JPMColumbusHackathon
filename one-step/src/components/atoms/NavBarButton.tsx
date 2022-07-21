@@ -9,8 +9,8 @@ const NavBarButtonContainer = styled.div`
 `;
 
 const NavButton = styled.button`
-  background-color: #576F72;
-  border: 2px solid #909C9E;
+  background-color: #e4dccf;
+  border: 2px solid #e4dccf;
   border-radius: 3px;
   height: 30px;
   width: 120px;

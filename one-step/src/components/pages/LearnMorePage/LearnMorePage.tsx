@@ -55,6 +55,7 @@ const AboutMe = styled.div`
 
 const MyFace = styled.img`
   border: 3px solid #324B4E;
+  border-radius: 10px;
   height: 200px;
   width: 200px;
 `

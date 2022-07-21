@@ -9,8 +9,8 @@ const AccountButtonContainer = styled.div`
 `;
 
 const AccButton = styled.button`
-  background-color: #70ABAF;
-  border: 2px solid #white;
+  background-color: #7d9d9c;
+  border: 2px solid #7d9d9c;
   border-radius: 3px;
   height: 35px;
   width: 100px;

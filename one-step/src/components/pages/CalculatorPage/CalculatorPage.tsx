@@ -221,10 +221,10 @@ const CalculatorPage: FC = () => {
     <p>The amount needed to pay to pay the loan in the full loan term</p>
 <br/>
     <b>Subsidized Loan</b>
-    <p>The amount needed to pay the loan in half the time</p>
+    <p>Loan option for undergraduates and is determined by your cost of attendance minus expected family contribution and other financial aid. These loans do not accrue interest while you are in school at least half-time or during deferment periods.</p>
 <br/>
     <b>Unsubsidized Loan</b>
-    <p>The amount needed to pay the loan in half the time</p>
+    <p>Loans option for both undergraduate and graduate students that are not based on financial need. Also, unlike a subsidized loan, you are responsible for the interest from the time the unsubsidized loan is disbursed until it’s paid in full.</p>
 <br/>
     </div>
     </ColumnTwo>
