@@ -91,7 +91,7 @@ const LearnMorePage: FC = () => {
       <CenterDisplay>
         <WhatWeDoContainer>
           <p><b>Problem: </b>For 44 million Americans, stress is created by the burden of a combined
-            1.7 trillion dollars in student loan debt. Education is suppose to improve quality of life, but many feel hopeless when it comes to the expenses of higher education. Many lack the resources,
+            1.7 trillion dollars in student loan debt. Education has the capacity to improve quality of life, but many feel hopeless when it comes to the expenses of higher education due to lack of resources,
             knowledge, and planning needed to alleviate student debt.</p>
           <p><b>Solution: </b>Many don’t know where to start when it comes to tackling student loans.
             That’s where One Step comes in. One Step is a website to help those who need to naviagate student loans practically.
